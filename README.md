@@ -17,6 +17,6 @@ Because of "CSoft Development" was [included to SDN list of OFAC](https://sancti
 
 ## About updates / Обновления
 
-Look [file](\release_notes.md).
+Look [file](release_notes.md).
 
-См. [файл](\release_notes.md).
+См. [файл](release_notes.md).
