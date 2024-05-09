@@ -12,8 +12,10 @@ Download latest version from [Releases](https://github.com/GeorgGrebenyuk/Dyn_Ac
 ## Limitations / Ограничения
 
 Because of "CSoft Development" was [included to SDN list of OFAC](https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48745), that package will not distributed with Dynamo's package manager.
+Use that package until Dynamo 3.0 versions!
 
 Из-за нахождения CSoft Development [в списке SDN OFAC](https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48745) данный пакет не будет распространяться публично через менеджер пакетов.
+Используйте данный пакет на версиях Dynamo до 3.0!
 
 ## Samples / Примеры
 
