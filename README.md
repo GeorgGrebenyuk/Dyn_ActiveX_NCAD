@@ -15,8 +15,15 @@ Because of "CSoft Development" was [included to SDN list of OFAC](https://sancti
 
 Из-за нахождения CSoft Development [в списке SDN OFAC](https://sanctionssearch.ofac.treas.gov/Details.aspx?id=48745) данный пакет не будет распространяться публично через менеджер пакетов.
 
+## Samples / Примеры
+
+Look `*.dyn` files at folder [dyn](dyn).
+
+См. `*.dyn` файлы в папке [dyn](dyn).
+
 ## About updates / Обновления
 
 Look [file](release_notes.md).
 
 См. [файл](release_notes.md).
+
