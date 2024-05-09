@@ -5,9 +5,9 @@ Source code for Autodesk Dynamo package "Link_COM_NCad_and_MST" to access via Ac
 
 ## Using / Использование
 
-Download latest version from [Releases](https://github.com/GeorgGrebenyuk/Dyn_ActiveX_NCAD/releases/latest), unzip archive and load `Link_COM_NCad_and_MST.dll` to Dynamo (File -> Load library).
+Download latest version from [Releases](https://github.com/GeorgGrebenyuk/Dyn_ActiveX_NCAD/releases/latest), unzip archive `Link_COM_NCad_and_MST.zip` and load `Link_COM_NCad_and_MST.dll` to Dynamo (File -> Load library).
 
-Загрузить последнюю версию из раздела [Releases](https://github.com/GeorgGrebenyuk/Dyn_ActiveX_NCAD/releases/latest), распакуйте архив и загрузите `Link_COM_NCad_and_MST.dll` в Dynamo (Файл -> Импорт библиотеки).
+Загрузить последнюю версию из раздела [Releases](https://github.com/GeorgGrebenyuk/Dyn_ActiveX_NCAD/releases/latest), распакуйте архив `Link_COM_NCad_and_MST.zip` и загрузите `Link_COM_NCad_and_MST.dll` в Dynamo (Файл -> Импорт библиотеки).
 
 ## Limitations / Ограничения
 
