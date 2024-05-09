@@ -29,3 +29,6 @@ Look [file](release_notes.md).
 
 См. [файл](release_notes.md).
 
+## Discussion / Обсуждение
+
+https://forum.nanocad.ru/discussion/221/autodesk-dynamo-integraciya-s-nanocad
