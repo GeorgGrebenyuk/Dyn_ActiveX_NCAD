@@ -9,8 +9,9 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <GenerateDependencyFile>true</GenerateDependencyFile>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
     <AssemblyVersion>1.0.0</AssemblyVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +37,12 @@
 
   <ItemGroup>
     <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="2.12.1.8246" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
 
 </Project>

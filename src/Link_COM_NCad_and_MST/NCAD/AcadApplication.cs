@@ -83,39 +83,32 @@ namespace DynNCXLib
             if (check_app != null) this._i = check_app;
         }
         /// <summary>
-        /// Fet acad instance from latest installed version on PC (Non-recommended for use in public-sharing scripts)
+        /// Get acad instance from latest installed version on PC (Non-recommended for use in public-sharing scripts)
         /// </summary>
         public AcadApplication()
         {
-            var check_app = Marshal2.GetActiveObject("AutoCAD.Application") as nanoCAD.Application;
+            var check_app = Marshal2.GetActiveObject("nanoCAD.Application") as nanoCAD.Application;
             if (check_app != null) this._i = check_app;
         }
 
         /// <summary>
-        /// Get ProgID identificators for AutoCAD 2010-2025. Old versions may be no supported
+        /// Get ProgID identificators for nanoCAD
         /// </summary>
         /// <returns></returns>
-        [dr.MultiReturn(new [] { "AutoCAD 2010", "AutoCAD 2011", "AutoCAD 2012", "AutoCAD 2013", "AutoCAD 2014", 
-            "AutoCAD 2015", "AutoCAD 2016", "AutoCAD 2017", "AutoCAD 2018", "AutoCAD 2019", 
-            "AutoCAD 2020", "AutoCAD 2021", "AutoCAD 2022", "AutoCAD 2023", "AutoCAD 2024", "AutoCAD 2025" })]
+        [dr.MultiReturn(new [] { "nanoCAD 3.5", "nanoCAD 9", "nanoCAD Plus 10", "nanoCAD Plus 11", "nanoCAD Plus 12", "nanoCAD Plus 21", "nanoCAD 22.0", "nanoCAD 23.0", "nanoCAD 23.1", "nanoCAD 24.0", "nanoCAD 24.1" })]
         public static Dictionary<string, string> AcadApplicationVersions() => new Dictionary<string, string>()
         {
-            {"AutoCAD 2010","AutoCAD.Application.18.0"  },
-            {"AutoCAD 2011","AutoCAD.Application.18.1"  },
-            {"AutoCAD 2012","AutoCAD.Application.18.2"  },
-            {"AutoCAD 2013","AutoCAD.Application.19.0"  },
-            {"AutoCAD 2014","AutoCAD.Application.19.1"  },
-            {"AutoCAD 2015","AutoCAD.Application.20"  },
-            {"AutoCAD 2016","AutoCAD.Application.20"  },
-            {"AutoCAD 2017","AutoCAD.Application.21"  },
-            {"AutoCAD 2018","AutoCAD.Application.22"  },
-            {"AutoCAD 2019","AutoCAD.Application.23"  },
-            {"AutoCAD 2020","AutoCAD.Application.23.1"  },
-            {"AutoCAD 2021","AutoCAD.Application.24"  },
-            {"AutoCAD 2022","AutoCAD.Application.24.1"  },
-            {"AutoCAD 2023","AutoCAD.Application.24.2"  },
-            {"AutoCAD 2024","AutoCAD.Application.24.3"  },
-            {"AutoCAD 2025","AutoCAD.Application.25"  }
+            {"nanoCAD 3.5","nanoCAD.Application.3.5"  },
+            {"nanoCAD 9","nanoCAD.Application.9.0"  },
+            {"nanoCAD Plus 10","nanoCAD.Application.10.0"  },
+            {"nanoCAD Plus 11","nanoCAD.Application.11.0"  },
+            {"nanoCAD Plus 12","nanoCAD.Application.12.0"  },
+            {"nanoCAD Plus 21","nanoCAD.Application.21.0"  },
+            {"nanoCAD 22.0","nanoCAD.Application.22.0"  },
+            {"nanoCAD 23.0","nanoCAD.Application.23.0"  },
+            {"nanoCAD 23.1","nanoCAD.Application.23.1"  },
+            {"nanoCAD 24.0","nanoCAD.Application.24.0"  },
+            {"nanoCAD 24.1","nanoCAD.Application.24.1"  }
         };
 
         /// <summary>
