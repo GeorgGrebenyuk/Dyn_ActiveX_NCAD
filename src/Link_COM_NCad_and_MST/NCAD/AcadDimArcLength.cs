@@ -1,4 +1,4 @@
-﻿using static DynNCXLib.GeometryWrapper;
+﻿using DynNCXLib.GeometryWrapper;
 using System;
 
 namespace DynNCXLib 

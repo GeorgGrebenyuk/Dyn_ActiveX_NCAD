@@ -1,4 +1,4 @@
-﻿using static DynNCXLib.GeometryWrapper;
+﻿using DynNCXLib.GeometryWrapper;
 using System.CodeDom;
 using System.Collections.Generic;
 using dg = Autodesk.DesignScript.Geometry;

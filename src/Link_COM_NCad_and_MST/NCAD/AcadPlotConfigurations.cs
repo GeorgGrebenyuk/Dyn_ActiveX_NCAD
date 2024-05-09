@@ -18,16 +18,16 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		private AcadPlotConfigurations Item(object Index) 
+		private AcadPlotConfiguration Item(object Index) 
 		{
-			return new AcadPlotConfigurations(this._i.Item(Index));
+			return new AcadPlotConfiguration(this._i.Item(Index));
 		}
-		public List<AcadPlotConfigurations> GetAcadPlotConfigurations()
+		public List<AcadPlotConfiguration> GetAcadPlotConfigurations()
 		{
-			List<AcadPlotConfigurations> cs = new List<AcadPlotConfigurations>();
-			foreach (var c in this._i)
+			List<AcadPlotConfiguration> cs = new List<AcadPlotConfiguration>();
+			for(int c = 0; c < Count; c++)
 			{
-				cs.Add(new AcadPlotConfigurations(c));
+				cs.Add(this.Item(c));
 			}
 			return cs;
 		}

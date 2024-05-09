@@ -46,7 +46,7 @@ namespace DynNCXLib
         /// Get ProgID identificators for nanoCAD
         /// </summary>
         /// <returns></returns>
-        [dr.MultiReturn(new [] { "nanoCAD 3.5", "nanoCAD 9", "nanoCAD Plus 10", "nanoCAD Plus 11", "nanoCAD Plus 12", "nanoCAD Plus 21", "nanoCAD 22.0", "nanoCAD 23.0", "nanoCAD 23.1", "nanoCAD 24.0", "nanoCAD 24.1" })]
+        [dr.MultiReturn(new [] { "nanoCAD 3.5", "nanoCAD 9", "nanoCAD Plus 10", "nanoCAD Plus 11", "nanoCAD Plus 12", "nanoCAD Plus 21", "nanoCAD 22", "nanoCAD 23", "nanoCAD 24.0", "nanoCAD 24.1" })]
         public static Dictionary<string, string> AcadApplicationVersions() => new Dictionary<string, string>()
         {
             {"nanoCAD 3.5","nanoCAD.Application.3.5"  },
@@ -55,11 +55,11 @@ namespace DynNCXLib
             {"nanoCAD Plus 11","nanoCAD.Application.11.0"  },
             {"nanoCAD Plus 12","nanoCAD.Application.12.0"  },
             {"nanoCAD Plus 21","nanoCAD.Application.21.0"  },
-            {"nanoCAD 22.0","nanoCAD.Application.22.0"  },
-            {"nanoCAD 23.0","nanoCAD.Application.23.0"  },
-            {"nanoCAD 23.1","nanoCAD.Application.23.1"  },
-            {"nanoCAD 24.0","nanoCAD.Application.24.0"  },
-            {"nanoCAD 24.1","nanoCAD.Application.24.1"  }
+            {"nanoCAD 22","nanoCADx64.Application.22.0"  },
+            {"nanoCAD 23","nanoCADx64.Application.23.0"  },
+            //{"nanoCAD 23.1","nanoCADx64.Application.23.0"  },
+            {"nanoCAD 24.0","nanoCADx64.Application.24.0"  },
+            {"nanoCAD 24.1","nanoCADx64.Application.24.1"  }
         };
 
         /// <summary>
