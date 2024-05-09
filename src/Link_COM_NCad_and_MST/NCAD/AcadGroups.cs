@@ -14,14 +14,6 @@ namespace DynNCXLib
 			this._i = AcadGroups_object as OdaX.AcadGroups;
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
-
-        ///<summary>
-        ///
-        ///</summary>
-        private AcadGroup Item(object Index) 
-		{
-			return new AcadGroup(this._i.Item(Index));
-		}
 		/// <summary>
 		/// Get all groups
 		/// </summary>

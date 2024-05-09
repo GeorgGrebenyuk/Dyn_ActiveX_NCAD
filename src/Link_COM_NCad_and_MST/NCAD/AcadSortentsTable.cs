@@ -32,31 +32,31 @@
 		///<summary>
 		///
 		///</summary>
-		public void MoveBelow(object Objects,dynamic Target) 
+		public void MoveBelow(object Objects, AcadEntity Target) 
 		{
-			this._i.MoveBelow(Objects,Target);
+			this._i.MoveBelow(Objects,Target._i);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void MoveAbove(object Objects,dynamic Target) 
+		public void MoveAbove(object Objects, AcadEntity Target) 
 		{
-			this._i.MoveAbove(Objects,Target);
+			this._i.MoveAbove(Objects,Target._i);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public void SwapOrder(dynamic Object1,dynamic Object2) 
+		public void SwapOrder(AcadEntity Object1, AcadEntity Object2) 
 		{
-			this._i.SwapOrder(Object1,Object2);
+			this._i.SwapOrder(Object1._i,Object2._i);
 		}
 
 		///<summary>
 		///
 		///</summary>
-		public dynamic Block => this._i.Block();
+		public AcadBlock Block => new AcadBlock(this._i.Block());
 
 		///<summary>
 		///

@@ -17,56 +17,7 @@ using Microsoft.Win32;
 
 namespace DynNCXLib
 {
-    [dr.IsVisibleInDynamoLibrary(false)]
-    public static class Marshal2
-    {
-        internal const String OLEAUT32 = "oleaut32.dll";
-        internal const String OLE32 = "ole32.dll";
-
-        [System.Security.SecurityCritical]  // auto-generated_required
-        public static Object GetActiveObject(String progID)
-        {
-            Object obj = null;
-            Guid clsid;
-
-            // Call CLSIDFromProgIDEx first then fall back on CLSIDFromProgID if
-            // CLSIDFromProgIDEx doesn't exist.
-            try
-            {
-                CLSIDFromProgIDEx(progID, out clsid);
-            }
-            //            catch
-            catch (Exception)
-            {
-                CLSIDFromProgID(progID, out clsid);
-            }
-
-            GetActiveObject(ref clsid, IntPtr.Zero, out obj);
-            return obj;
-        }
-
-        //[DllImport(Microsoft.Win32.Win32Native.OLE32, PreserveSig = false)]
-        [DllImport(OLE32, PreserveSig = false)]
-        [ResourceExposure(ResourceScope.None)]
-        [SuppressUnmanagedCodeSecurity]
-        [System.Security.SecurityCritical]  // auto-generated
-        private static extern void CLSIDFromProgIDEx([MarshalAs(UnmanagedType.LPWStr)] String progId, out Guid clsid);
-
-        //[DllImport(Microsoft.Win32.Win32Native.OLE32, PreserveSig = false)]
-        [DllImport(OLE32, PreserveSig = false)]
-        [ResourceExposure(ResourceScope.None)]
-        [SuppressUnmanagedCodeSecurity]
-        [System.Security.SecurityCritical]  // auto-generated
-        private static extern void CLSIDFromProgID([MarshalAs(UnmanagedType.LPWStr)] String progId, out Guid clsid);
-
-        //[DllImport(Microsoft.Win32.Win32Native.OLEAUT32, PreserveSig = false)]
-        [DllImport(OLEAUT32, PreserveSig = false)]
-        [ResourceExposure(ResourceScope.None)]
-        [SuppressUnmanagedCodeSecurity]
-        [System.Security.SecurityCritical]  // auto-generated
-        private static extern void GetActiveObject(ref Guid rclsid, IntPtr reserved, [MarshalAs(UnmanagedType.Interface)] out Object ppunk);
-
-    }
+    
     /// <summary>
     /// Root clas for wotk with AutoCAD application's instance. An instance of the AutoCAD application
     /// </summary>
@@ -79,7 +30,7 @@ namespace DynNCXLib
         /// <param name="progID"></param>
         public AcadApplication(string progID)
         {
-            var check_app = Marshal2.GetActiveObject(progID) as nanoCAD.Application;
+            var check_app = Marshal.GetActiveObject(progID) as nanoCAD.Application;
             if (check_app != null) this._i = check_app;
         }
         /// <summary>
@@ -87,7 +38,7 @@ namespace DynNCXLib
         /// </summary>
         public AcadApplication()
         {
-            var check_app = Marshal2.GetActiveObject("nanoCAD.Application") as nanoCAD.Application;
+            var check_app = Marshal.GetActiveObject("nanoCAD.Application") as nanoCAD.Application;
             if (check_app != null) this._i = check_app;
         }
 

@@ -15,14 +15,6 @@ namespace DynNCXLib
 			if (this._i == null) throw new System.Exception("Invalid casting");
 		}
 
-        ///<summary>
-        ///
-        ///</summary>
-        private dynamic Item(dynamic Index) 
-		{
-			return this._i.Item(Index);
-		}
-
 		///<summary>
 		///
 		///</summary>

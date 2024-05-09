@@ -62,7 +62,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public void Set_FlowDirection(OdaX.AcTableDirection pFlow) 
+		public void Set_FlowDirection(OdaX.AcTableDirection pFlow)
 		{
 			this._i.FlowDirection = pFlow;
 		}
@@ -356,10 +356,11 @@ namespace DynNCXLib
 		/////<summary>
 		/////
 		/////</summary>
-		//public void GetCellStyles(object cellStylesArray) 
+		//public void GetCellStyles(object cellStylesArray)
 		//{
 		//	this._i.GetCellStyles(cellStylesArray);
 		//}
+		//ref
 
 		///<summary>
 		///

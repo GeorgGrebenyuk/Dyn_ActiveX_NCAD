@@ -42,9 +42,9 @@
 		///<summary>
 		///
 		///</summary>
-		public void CopyFrom(dynamic StyleSource) 
+		public void CopyFrom(AcadDimStyle StyleSource) 
 		{
-			this._i.CopyFrom(StyleSource);
+			this._i.CopyFrom(StyleSource._i);
 		}
 	}
 }

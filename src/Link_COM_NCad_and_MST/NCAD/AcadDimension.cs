@@ -108,13 +108,13 @@ namespace DynNCXLib
 		///</summary>
 		public object TextColor => this._i.TextColor;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_TextColor(dynamic color) 
-		{
-			this._i.TextColor = color;
-		}
+		/////<summary>
+		/////
+		/////</summary>
+		//public void Set_TextColor(object color) 
+		//{
+		//	this._i.TextColor = color;
+		//}
 
 		///<summary>
 		///
@@ -171,12 +171,12 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public dynamic ScaleFactor => this._i.ScaleFactor;
+		public double ScaleFactor => this._i.ScaleFactor;
 
 		///<summary>
 		///
 		///</summary>
-		public void Set_ScaleFactor(dynamic factor) 
+		public void Set_ScaleFactor(double factor) 
 		{
 			this._i.ScaleFactor = factor;
 		}
@@ -381,12 +381,12 @@ namespace DynNCXLib
 		///</summary>
 		public object TextFillColor => this._i.TextFillColor;
 
-		///<summary>
-		///
-		///</summary>
-		public void Set_TextFillColor(dynamic color) 
-		{
-			this._i.TextFillColor = color;
-		}
+		/////<summary>
+		/////
+		/////</summary>
+		//public void Set_TextFillColor(dynamic color) 
+		//{
+		//	this._i.TextFillColor = color;
+		//}
 	}
 }
