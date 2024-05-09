@@ -4,7 +4,7 @@
     <RootNamespace>DynNCXLib</RootNamespace>
     <TargetFramework>net48</TargetFramework>
     <Platforms>AnyCPU;x64</Platforms>
-    <BaseOutputPath>..\bin</BaseOutputPath>
+    <BaseOutputPath>$(SolutionDir)bin</BaseOutputPath>
     <LangVersion>7.0</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -44,5 +44,9 @@
       <Private>False</Private>
     </Reference>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if not exist &quot;$(SolutionDir)Link_COM_NCad_and_MST&quot; mkdir &quot;$(SolutionDir)Link_COM_NCad_and_MST&quot;&#xD;&#xA;if not exist &quot;$(SolutionDir)Link_COM_NCad_and_MST\bin&quot; mkdir &quot;$(SolutionDir)Link_COM_NCad_and_MST\bin&quot;&#xD;&#xA;copy &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(SolutionDir)Link_COM_NCad_and_MST\bin\$(ProjectName).dll&quot;&#xD;&#xA;copy &quot;$(TargetDir)$(ProjectName).dll&quot; &quot;$(SolutionDir)Link_COM_NCad_and_MST\bin\$(ProjectName).xml&quot;&#xD;&#xA;copy &quot;$(ProjectDir)pkg.json&quot; &quot;$(SolutionDir)Link_COM_NCad_and_MST\pkg.json&quot;&#xD;&#xA;if not exist &quot;$(SolutionDir)Link_COM_NCad_and_MST\doc&quot; mkdir &quot;$(SolutionDir)Link_COM_NCad_and_MST\doc&quot;&#xD;&#xA;if not exist &quot;$(SolutionDir)Link_COM_NCad_and_MST\dyf&quot; mkdir &quot;$(SolutionDir)Link_COM_NCad_and_MST\dyf&quot;&#xD;&#xA;if not exist &quot;$(SolutionDir)Link_COM_NCad_and_MST\extra&quot; mkdir &quot;$(SolutionDir)Link_COM_NCad_and_MST\extra&quot;" />
+  </Target>
 
 </Project>
