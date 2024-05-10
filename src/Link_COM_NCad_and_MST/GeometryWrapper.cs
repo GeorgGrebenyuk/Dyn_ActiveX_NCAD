@@ -22,6 +22,14 @@ namespace DynNCXLib.GeometryWrapper
             this.z = 0.0;
         }
 
+        public Point(double[] xyz)
+        {
+            this.x = xyz[0];
+            this.y = xyz[1];
+            if (xyz.Length == 3) this.z = xyz[2];
+            else this.z = 0.0;
+        }
+
         public static Point ByCoordinates(double x, double y, double z = 0.0)
         {
             Point p = new Point(x, y, z);

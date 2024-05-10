@@ -271,7 +271,7 @@ namespace DynNCXLib
         ///<summary>
         /// Specifies the X, Y, Z coordinate for center of the base or center of the solid
         ///</summary>
-        public Point Position => this._i.Position;
+        public Point Position => new Point((double[])this._i.Position);
 
         ///<summary>
         ///Specifies the X, Y, Z coordinate for center of the base or center of the solid

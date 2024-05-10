@@ -295,7 +295,7 @@ namespace DynNCXLib
         ///<summary>
         ///Specifies the origin of the layout or plot configuration in WCS coordinates
         ///</summary>
-        public double[] PlotOrigin => this._i.PlotOrigin;
+        public double[] PlotOrigin => (double[])this._i.PlotOrigin;
 
         /// <summary>
         /// Specifies the origin of the layout or plot configuration in WCS coordinates

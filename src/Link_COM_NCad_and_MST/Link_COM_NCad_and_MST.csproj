@@ -15,25 +15,61 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <COMReference Include="nanoCAD">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>23</VersionMajor>
-      <Guid>00fa1b17-5455-4c60-bb2a-6492a95d7a68</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="OdaX">
-      <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>2</VersionMinor>
-      <VersionMajor>23</VersionMajor>
-      <Guid>0dfa2554-8a2b-44d0-be8f-85eeb803aee9</Guid>
-      <Lcid>0</Lcid>
-      <Isolated>false</Isolated>
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </COMReference>
+    
+    
   </ItemGroup>
+
+  <Choose>
+    <When Condition=" '$(Configuration)' == 'Debug'">
+      <ItemGroup>
+        <COMReference Include="nanoCAD">
+          <WrapperTool>tlbimp</WrapperTool>
+          <VersionMinor>0</VersionMinor>
+          <VersionMajor>23</VersionMajor>
+          <Guid>00fa1b17-5455-4c60-bb2a-6492a95d7a68</Guid>
+          <Lcid>0</Lcid>
+          <Isolated>false</Isolated>
+          <EmbedInteropTypes>true</EmbedInteropTypes>
+        </COMReference>
+        <COMReference Include="OdaX">
+          <WrapperTool>tlbimp</WrapperTool>
+          <VersionMinor>2</VersionMinor>
+          <VersionMajor>23</VersionMajor>
+          <Guid>0dfa2554-8a2b-44d0-be8f-85eeb803aee9</Guid>
+          <Lcid>0</Lcid>
+          <Isolated>false</Isolated>
+          <EmbedInteropTypes>true</EmbedInteropTypes>
+        </COMReference>
+        <COMReference Include="mdsUnitsLib">
+          <WrapperTool>tlbimp</WrapperTool>
+          <VersionMinor>0</VersionMinor>
+          <VersionMajor>1</VersionMajor>
+          <Guid>1ae1985c-5d87-4e89-8e67-068628fc3cd6</Guid>
+          <Lcid>0</Lcid>
+          <Isolated>false</Isolated>
+          <EmbedInteropTypes>true</EmbedInteropTypes>
+        </COMReference>
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Configuration)' == 'Release'">
+		<ItemGroup>
+			<Reference Include="Interop.mdsUnitsLib">
+				<HintPath>deps\Interop.mdsUnitsLib.dll</HintPath>
+				<Private>True</Private>
+		  </Reference>
+      <Reference Include="Interop.nanoCAD">
+        <HintPath>deps\Interop.nanoCAD.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+      <Reference Include="Interop.OdaX">
+        <HintPath>deps\Interop.OdaX.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
+		</ItemGroup>
+      </When>
+  </Choose>
+  
+  
 
   <ItemGroup>
     <PackageReference Include="DynamoVisualProgramming.ZeroTouchLibrary" Version="2.12.1.8246" />

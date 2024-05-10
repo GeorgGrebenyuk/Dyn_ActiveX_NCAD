@@ -40,7 +40,7 @@ namespace DynNCXLib
         ///<summary>
         ///
         ///</summary>
-        public Point BasePoint => Technical.PointByDynPoint(this._i.BasePoint);
+        public Point BasePoint => Technical.PointByDynPoint((dynamic)this._i.BasePoint);
 
 		///<summary>
 		///
@@ -53,7 +53,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public Point SecondPoint => Technical.PointByDynPoint(this._i.SecondPoint);
+		public Point SecondPoint => Technical.PointByDynPoint((dynamic)this._i.SecondPoint);
 
 		///<summary>
 		///

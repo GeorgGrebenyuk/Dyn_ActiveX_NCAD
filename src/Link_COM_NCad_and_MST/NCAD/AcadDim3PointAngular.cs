@@ -45,7 +45,7 @@ namespace DynNCXLib
         ///<summary>
         ///Specifies the endpoint of the first extension line
         ///</summary>
-        public Point ExtLine1EndPoint => Technical.PointByDynPoint(this._i.ExtLine1EndPoint);
+        public Point ExtLine1EndPoint => Technical.PointByDynPoint((dynamic)this._i.ExtLine1EndPoint);
 
         ///<summary>
         ///Specifies the endpoint of the first extension line
@@ -58,7 +58,7 @@ namespace DynNCXLib
         ///<summary>
         ///Specifies the endpoint of the second extension line
         ///</summary>
-        public Point ExtLine2EndPoint => Technical.PointByDynPoint(this._i.ExtLine2EndPoint);
+        public Point ExtLine2EndPoint => Technical.PointByDynPoint((dynamic)this._i.ExtLine2EndPoint);
 
         ///<summary>
         ///Specifies the endpoint of the second extension line

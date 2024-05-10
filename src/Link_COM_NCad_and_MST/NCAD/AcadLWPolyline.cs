@@ -39,7 +39,7 @@ namespace DynNCXLib
         ///<summary>
         /// Get all cordinates in that object as array of Points
         ///</summary>
-        public List<Point> Coordinates => Technical.PointsByArrayOfDoubleArray(this._i.Coordinates, true);
+        public List<Point> Coordinates => Technical.PointsByArrayOfDoubleArray((double[])this._i.Coordinates, true);
 
         ///<summary>
         /// Set coordinates to that objects from Dynamo's points array

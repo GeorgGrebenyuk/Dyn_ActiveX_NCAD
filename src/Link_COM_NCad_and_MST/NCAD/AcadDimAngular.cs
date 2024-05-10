@@ -43,7 +43,7 @@ namespace DynNCXLib
         ///<summary>
         ///
         ///</summary>
-        public Point ExtLine1StartPoint => Technical.PointByDynPoint(this._i.ExtLine1StartPoint);
+        public Point ExtLine1StartPoint => Technical.PointByDynPoint((dynamic)this._i.ExtLine1StartPoint);
 
 		///<summary>
 		///
@@ -56,7 +56,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public Point ExtLine1EndPoint => Technical.PointByDynPoint(this._i.ExtLine1EndPoint);
+		public Point ExtLine1EndPoint => Technical.PointByDynPoint((dynamic)this._i.ExtLine1EndPoint);
 
 		///<summary>
 		///
@@ -69,7 +69,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public Point ExtLine2StartPoint => Technical.PointByDynPoint(this._i.ExtLine2StartPoint);
+		public Point ExtLine2StartPoint => Technical.PointByDynPoint((dynamic)this._i.ExtLine2StartPoint);
 
 		///<summary>
 		///
@@ -82,7 +82,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public Point ExtLine2EndPoint => Technical.PointByDynPoint(this._i.ExtLine2EndPoint);
+		public Point ExtLine2EndPoint => Technical.PointByDynPoint((dynamic)this._i.ExtLine2EndPoint);
 
 		///<summary>
 		///

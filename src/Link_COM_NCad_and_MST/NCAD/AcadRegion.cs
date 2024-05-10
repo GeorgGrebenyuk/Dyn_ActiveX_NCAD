@@ -34,7 +34,7 @@ namespace DynNCXLib
         /// <param name="ObjectList">The array of objects forming the closed coplanar face to be made into a region</param>
         public AcadRegion(AcadBlock AcadBlock, List<dynamic> ObjectList)
         {
-            this._i =  AcadBlock._i.AddRegion(ObjectList.Select(a=>a._i).ToArray());
+            this._i = (OdaX.AcadRegion)AcadBlock._i.AddRegion(ObjectList.Select(a=>a._i).ToArray());
         }
 
         ///<summary>
@@ -45,7 +45,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public Point Centroid => Technical.PointByDynPoint(this._i.Centroid);
+		public Point Centroid => Technical.PointByDynPoint((dynamic)this._i.Centroid);
 
 		///<summary>
 		///

@@ -41,7 +41,7 @@ namespace DynNCXLib
         ///<summary>
         ///
         ///</summary>
-        public Point ExtLine1Point => Technical.PointByDynPoint(this._i.ExtLine1Point);
+        public Point ExtLine1Point => Technical.PointByDynPoint((dynamic)this._i.ExtLine1Point);
 
 		///<summary>
 		///
@@ -54,7 +54,7 @@ namespace DynNCXLib
 		///<summary>
 		///
 		///</summary>
-		public Point ExtLine2Point => Technical.PointByDynPoint(this._i.ExtLine2Point);
+		public Point ExtLine2Point => Technical.PointByDynPoint((dynamic)this._i.ExtLine2Point);
 
 		///<summary>
 		///

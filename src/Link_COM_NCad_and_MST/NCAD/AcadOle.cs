@@ -27,7 +27,7 @@ namespace DynNCXLib
         ///<summary>
         ///
         ///</summary>
-        public Point InsertionPoint => Technical.PointByDynPoint(this._i.InsertionPoint);
+        public Point InsertionPoint => Technical.PointByDynPoint((dynamic)this._i.InsertionPoint);
 
 		///<summary>
 		///
