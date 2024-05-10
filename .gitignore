@@ -225,4 +225,4 @@ AppPackages/
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
 
-Link_COM_NCad_and_MST
+src/IDL/
