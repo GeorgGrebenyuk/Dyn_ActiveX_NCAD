@@ -14,11 +14,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    
-    
-  </ItemGroup>
-
   <Choose>
     <When Condition=" '$(Configuration)' == 'Debug'">
       <ItemGroup>
@@ -49,6 +44,15 @@
           <Isolated>false</Isolated>
           <EmbedInteropTypes>true</EmbedInteropTypes>
         </COMReference>
+        <COMReference Include="mdsLibManagerLib">
+          <WrapperTool>tlbimp</WrapperTool>
+          <VersionMinor>0</VersionMinor>
+          <VersionMajor>1</VersionMajor>
+          <Guid>1eb7b184-2c93-4db2-97e8-2f8a392495c1</Guid>
+          <Lcid>0</Lcid>
+          <Isolated>false</Isolated>
+          <EmbedInteropTypes>true</EmbedInteropTypes>
+        </COMReference>
       </ItemGroup>
     </When>
     <When Condition=" '$(Configuration)' == 'Release'">
@@ -65,9 +69,17 @@
         <HintPath>deps\Interop.OdaX.dll</HintPath>
         <Private>True</Private>
       </Reference>
+      <Reference Include="Interop.mdsLibManagerLib">
+        <HintPath>deps\Interop.mdsLibManagerLib.dll</HintPath>
+        <Private>True</Private>
+      </Reference>
 		</ItemGroup>
       </When>
   </Choose>
+
+  <ItemGroup>
+    
+  </ItemGroup>
   
   
 
