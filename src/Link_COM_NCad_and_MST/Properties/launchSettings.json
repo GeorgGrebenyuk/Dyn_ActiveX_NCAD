@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Link_COM_NCad_and_MST": {
+      "commandName": "Project"
+    },
+    "Dynamo 2.17.3": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Soft\\DynamoCoreRuntime2.17.3\\DynamoSandbox.exe"
+    }
+  }
+}

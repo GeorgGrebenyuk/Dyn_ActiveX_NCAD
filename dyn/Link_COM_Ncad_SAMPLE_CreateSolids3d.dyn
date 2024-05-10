@@ -1,0 +1,2749 @@
+{
+  "Uuid": "161c088f-3e9d-4b56-841d-ff17c76f1b74",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Link_COM_Ncad_SAMPLE_CreateSolids3d",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "DynNCXLib.GeometryWrapper.Point": {
+        "Key": "DynNCXLib.GeometryWrapper.Point",
+        "Value": "Link_COM_NCad_and_MST.dll"
+      },
+      "DynNCXLib.GeometryWrapper.Vector": {
+        "Key": "DynNCXLib.GeometryWrapper.Vector",
+        "Value": "Link_COM_NCad_and_MST.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadApplication.AcadApplication@string",
+      "Id": "c5e745b1d831491ab843b1bb9abedaf6",
+      "Inputs": [
+        {
+          "Id": "014fe9d7e0cb410090b9cd0ff7289f7e",
+          "Name": "progID",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1bf65b10db9f45fcbecc17033425e289",
+          "Name": "AcadApplication",
+          "Description": "AcadApplication",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Use AcadApplicationVersions to get progID data\n\nAcadApplication.AcadApplication (progID: string): AcadApplication"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadApplication.ActiveDocument",
+      "Id": "2273b82f37774230b181925d52049d14",
+      "Inputs": [
+        {
+          "Id": "5c794b986dd7480ab3c986c7775aff1f",
+          "Name": "acadApplication",
+          "Description": "DynNCXLib.AcadApplication",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "579c198609fa41a1a5e6a7deb8479eaf",
+          "Name": "AcadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get active drawing if it exists\n\nAcadApplication.ActiveDocument: AcadDocument"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadApplication.AcadApplicationVersions",
+      "Id": "8be4e821c7114d5ebb4f0965b8321124",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0486a1cfbb1f44568ed427ff7508d2d0",
+          "Name": "nanoCAD 3.5",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ca761c0c47084575bef8c8de1df468ec",
+          "Name": "nanoCAD 9",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8bad183200cd4d148e4b91388ad06a0d",
+          "Name": "nanoCAD Plus 10",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b7d45a5bc474f8186ccec9687f2f7ca",
+          "Name": "nanoCAD Plus 11",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8cd67b17d5594859914cafdfa1466f93",
+          "Name": "nanoCAD Plus 12",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c1a4e7a232444e6584840bfec7648a58",
+          "Name": "nanoCAD Plus 21",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da7086a395a24e2aac678862e141ad9a",
+          "Name": "nanoCAD 22",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "114d7b4a5e4a4b1082a7409abcce259e",
+          "Name": "nanoCAD 23",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "65031ffb11bd4e3189743ddf11fc394e",
+          "Name": "nanoCAD 24.0",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dbd30e7240eb4347bda5d3b0609779b9",
+          "Name": "nanoCAD 24.1",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get ProgID identificators for nanoCAD\n\nAcadApplication.AcadApplicationVersions ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadDatabase.AcadDatabase@DynNCXLib.AcadDocument",
+      "Id": "eacfc8908aa1430fbc6972778d2ab6c2",
+      "Inputs": [
+        {
+          "Id": "c191c73729a740d4a4c8df3dc8e4a500",
+          "Name": "AcadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b1704f2ee7514b18aeecc1981baccdd8",
+          "Name": "AcadDatabase",
+          "Description": "AcadDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Getting AcadDatabase from Document\n\nAcadDatabase.AcadDatabase (AcadDocument: AcadDocument): AcadDatabase"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadDatabase.ModelSpace",
+      "Id": "d0989fdee42145c98077f7fa8f827440",
+      "Inputs": [
+        {
+          "Id": "b03128f26da7480fbd321292bc9e506a",
+          "Name": "acadDatabase",
+          "Description": "DynNCXLib.AcadDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "68a19740309e48f88e40abf1e35c875b",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the ModelSpace collection for the document\n\nAcadDatabase.ModelSpace: AcadBlock"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadDocument.FullName",
+      "Id": "8df1b932e82341578dd20aa99ffe369c",
+      "Inputs": [
+        {
+          "Id": "497938ecc53641fea2d588b76035a49e",
+          "Name": "acadDocument",
+          "Description": "DynNCXLib.AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1f701198c7304ce2a87da40c8cb635e4",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the name of the application or document, including the path\n\nAcadDocument.FullName: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.AddEllipticalCone@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double,double",
+      "Id": "22f2bce9f23143b79629a2f010cff9f4",
+      "Inputs": [
+        {
+          "Id": "ce975ed379a042ef888a6e22b68d5ed9",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "984a86bae4d04079ac2ccef33172f2bd",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates specifying the center of the bounding box\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3bd565e626ba4944b92a38b7cd3ba7d7",
+          "Name": "MajorRadius",
+          "Description": "The length of the major radius for the ellipse base. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bb38b67e0a6b46eeb66712176be2a403",
+          "Name": "MinorRadius",
+          "Description": "The length of the minor radius for the ellipse base. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af574c5a9b164753ab2520bddc648787",
+          "Name": "Height",
+          "Description": "The height of the cone. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e76d56546b80442bb67cd6f9b945a568",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a 3D solid elliptical cone on the XY plane of the WCS given the Center, MajorRadius, MinorRadius, and Height\n\nAcad3DSolid.AddEllipticalCone (AcadBlock: AcadBlock, Center: Point, MajorRadius: double, MinorRadius: double, Height: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(0,0,0);\n3;\n1;\n5;",
+      "Id": "b8878c80a47945828faa8c943d548034",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2c827df455b6413da3b6c3d16541b197",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "42e983e0e67d4ed1b94aaa05c4923270",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8cd6986ef0174accbcdb540cc4b0ad97",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "61863d3bdb5f4ca49b5216ca75edbe76",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.AddEllipticalCylinder@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double,double",
+      "Id": "0a842d61cadb460b8c1c4839a41a1646",
+      "Inputs": [
+        {
+          "Id": "e930ffebd47448b894bc30ae3710abe0",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "98799900259c46fe94b3cb3af5b4735e",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates specifying the center of the bounding box\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "62b497d6b2214f3bad76acbb9fc9da0f",
+          "Name": "MajorRadius",
+          "Description": "The length of the major radius for the ellipse base. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "07d828ce79a048e0a1052410ea913c8c",
+          "Name": "MinorRadius",
+          "Description": "The length of the minor radius for the ellipse base. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "116153091c344410a6d391279fc9b1d0",
+          "Name": "Height",
+          "Description": "The height of the cylinder. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7ce2ab6574244ae789fbd38dd6a37f74",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a 3D solid elliptical cylinder whose base is on the XY plane of the WCS, given the Center, MajorRadius, MinorRadius, and Height\n\nAcad3DSolid.AddEllipticalCylinder (AcadBlock: AcadBlock, Center: Point, MajorRadius: double, MinorRadius: double, Height: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(10,0,0);\n3;\n1;\n5;",
+      "Id": "1f3d1923525f4907809b248bc306abc0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3cf528e1f52949d8bfd016a6f7c009be",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d9d275da1f8a4217989aef5494f0945c",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a3cd2b9cbbf7499ea9a968abfcc91f26",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "560bad01adc44ecb8614c09806835bbd",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.AddExtrudedSolid@DynNCXLib.AcadBlock,DynNCXLib.AcadRegion,double,double",
+      "Id": "33aa31643e9c44519511893cdf9bc1c2",
+      "Inputs": [
+        {
+          "Id": "e3c7c5b366744af5818d69c4e3a5e20d",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7306abb94a434398ab962911a39d1c3a",
+          "Name": "Profile",
+          "Description": "A profile can only be a Region object\n\nAcadRegion",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f10591f69e5c44ae9002506606bc71f4",
+          "Name": "Height",
+          "Description": "The height of the extrusion along the Z axis of the object's coordinate system. If you enter a positive number, AutoCAD extrudes the object along the positive Z axis. If you enter a negative number, AutoCAD extrudes the object along the negative Z axis\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ad0c45193fe545ec88f4ac79dd112029",
+          "Name": "TaperAngle",
+          "Description": "The taper angle of the extrusion must be provided in radians. The range of the taper angle is from -90 to +90 degrees. Positive angles taper in from the base, negative angles taper out. The default angle, 0, extrudes a 2D object perpendicular to its plane\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0818c6d5da8649dbb72a2d8067eecfeb",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates an extruded solid given the profile, height, and taper angle\n\nAcad3DSolid.AddExtrudedSolid (AcadBlock: AcadBlock, Profile: AcadRegion, Height: double, TaperAngle: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadRegion.AcadRegion@DynNCXLib.AcadBlock,var[]",
+      "Id": "510a18e194b2400382d5b7f044acae9e",
+      "Inputs": [
+        {
+          "Id": "c5cbad474bc943ceb73d27ddec9d04bf",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bfa56c0adeb14ee5a694d56465626fc7",
+          "Name": "ObjectList",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "03f0b69152b84f328eb34cd17f4b7bf1",
+          "Name": "AcadRegion",
+          "Description": "AcadRegion",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AcadRegion.AcadRegion (AcadBlock: AcadBlock, ObjectList: var[]): AcadRegion"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadCircle.AcadCircle@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double",
+      "Id": "b359227442fb476d9e103a04e6381e88",
+      "Inputs": [
+        {
+          "Id": "f1f9c45854064ac3814e06480e23fd17",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b172c90c29974f5c8ee4e52d26a6e6a6",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates specifying the circle's center\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e071e9f0ad0c4fe8aff83e0bd7d6da08",
+          "Name": "Radius",
+          "Description": "The radius of the circle. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0fb63816102c4734979a00472a22c084",
+          "Name": "AcadCircle",
+          "Description": "AcadCircle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a circle given a center point and radius\n\nAcadCircle.AcadCircle (AcadBlock: AcadBlock, Center: Point, Radius: double): AcadCircle"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(20,0,0);\n3;\n2;\n0.22231;",
+      "Id": "bcd10b04bbf3433cb2eefdd311b80f56",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b1018d7eb6454bc9af33409309c69f4d",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "589564283af34f1ba41d859949c0ab0c",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4251ab10f5eb4a8b8445b9a737ed0f46",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1e1479d8c49a4c6b88dd29b2465754e2",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "bb107c18baac436bbaac247ced938c72",
+      "Inputs": [
+        {
+          "Id": "e305c5ca61e74ba2bb3381631d576f99",
+          "Name": "item0",
+          "Description": "Индекс элемента #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb435b2ddff84207bec553439dee5560",
+          "Name": "list",
+          "Description": "Список (тип: var[]..[])",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Создание списка из заданных входных значений"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.AddExtrudedSolidAlongPath@DynNCXLib.AcadBlock,DynNCXLib.AcadRegion,var",
+      "Id": "15c0b32e6519494ea5d9e7dd3a2d6d9c",
+      "Inputs": [
+        {
+          "Id": "5844510c541949319c2bf1e9613b2d2b",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "87434cb87ae248b2937827dd47d5a062",
+          "Name": "Profile",
+          "Description": "A profile can only be a Region object\n\nAcadRegion",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "88785c1d1c1a436c844c1a9210c48f94",
+          "Name": "Path",
+          "Description": "The path can only be a Polyline, Circle, Ellipse, Spline, or Arc object\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fbf6aa0667ee4d189020855a9ebfe954",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates an extruded solid given the profile and an extrusion path\n\nAcad3DSolid.AddExtrudedSolidAlongPath (AcadBlock: AcadBlock, Profile: AcadRegion, Path: var): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[DynNCXLib.GeometryWrapper.Point.ByCoordinates(30,0,0),\nDynNCXLib.GeometryWrapper.Point.ByCoordinates(27,5,10),\nDynNCXLib.GeometryWrapper.Point.ByCoordinates(28,7,10)];\nDynNCXLib.GeometryWrapper.Vector.ByCoordinates(1,0,0);\nDynNCXLib.GeometryWrapper.Vector.ByCoordinates(1,20,0);",
+      "Id": "94f7d2ff22b044c094214d983b75111e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "225855fe8b2f4e9ab1fabbbdf349c246",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be4f19e1b52546da9f74ffeec9fe633a",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "87895522f24e41aab965f886430dea3b",
+          "Name": "",
+          "Description": "Значение выражения в строке 5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadSpline.AcadSpline@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point[],DynNCXLib.GeometryWrapper.Vector,DynNCXLib.GeometryWrapper.Vector",
+      "Id": "f9732b8f497843119cb4dee07ca8345e",
+      "Inputs": [
+        {
+          "Id": "bc943a01e8b54348ae66d37fe0c787e9",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0018be71ce0d4c3bad21780a04ab0b3f",
+          "Name": "PointsArray",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e8d1b7c5d0be4b20b4f48225dbd24b72",
+          "Name": "StartTangent",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1e663e253dc843ff840afa337549e47a",
+          "Name": "EndTangent",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "53cf905929514fc5825d6c583ea65de2",
+          "Name": "AcadSpline",
+          "Description": "AcadSpline",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AcadSpline.AcadSpline (AcadBlock: AcadBlock, PointsArray: Point[], StartTangent: Vector, EndTangent: Vector): AcadSpline"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.AddRevolvedSolid@DynNCXLib.AcadBlock,DynNCXLib.AcadRegion,DynNCXLib.GeometryWrapper.Point,DynNCXLib.GeometryWrapper.Vector,double",
+      "Id": "1b89638aed394540b9e229edbfe4228e",
+      "Inputs": [
+        {
+          "Id": "66bae66f88ef448fa01613c5cf09109e",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9a7bf579104246f48bc35cd5e6b274f8",
+          "Name": "Profile",
+          "Description": "A profile can only a Region object\n\nAcadRegion",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "04f9465ecdb04474a6e2720ca48db20d",
+          "Name": "AxisPoint",
+          "Description": "The 3D WCS coordinates specifying the start point of the axis of revolution\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0defc501b5f2487e8115fbf45923eaef",
+          "Name": "AxisDir",
+          "Description": "A 3D vector specifying the direction of the axis of revolution\n\nVector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ba98cf982de54beeb4d9825a474c2d70",
+          "Name": "Angle",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d71a19da97224a7bb39e8eebee2b8d24",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a revolved solid, given the region around an axis\n\nAcad3DSolid.AddRevolvedSolid (AcadBlock: AcadBlock, Profile: AcadRegion, AxisPoint: Point, AxisDir: Vector, Angle: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(40,0,0);\nDynNCXLib.GeometryWrapper.Vector.ByCoordinates(40,10,0);\nDynNCXLib.GeometryWrapper.Vector.ByCoordinates(1,20,0);\n5;",
+      "Id": "6445fc8696c344b292eb7e8e9c3ecea7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "93c3521d0947450fbe404c8675b4ef41",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fd7ec6d6fa5f43f69d65072baeb82ef0",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5c9873a4b3de432292f6df3e32ef46cd",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dc27c09b024940159f3d1848b11fd2c9",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.Boolean@OdaX.AcBooleanType,var",
+      "Id": "97647a2415e04040bd925e3c7df07291",
+      "Inputs": [
+        {
+          "Id": "9be38ee649244273ab61d8d0297554e5",
+          "Name": "acad3DSolid",
+          "Description": "DynNCXLib.Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0043bd555ef04bfcaa9a9d607886b189",
+          "Name": "BooleanType",
+          "Description": "AcBooleanType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "401676f148934776b45202ae1b41791e",
+          "Name": "SolidOrRegionObject",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cac8f77a72d24b3cb9993554ccbfbf9a",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Performs a Boolean operation (union, intersect, or subtract) between the object and another 3DSolid or Region object\n\nAcad3DSolid.Boolean (BooleanType: AcBooleanType, SolidOrRegionObject: var): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "OdaX.AcBooleanType.acUnion",
+      "Id": "acdb2ebd667648758d55d01204882e18",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ac09390ffd6f434e8dc516861d5aa7e3",
+          "Name": "AcBooleanType",
+          "Description": "AcBooleanType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AcBooleanType.acUnion: AcBooleanType"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.CreateBox@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double,double",
+      "Id": "328fd7ea967144fea54b39a6ad91ca72",
+      "Inputs": [
+        {
+          "Id": "51b21b517886453ca0f5fa94246898e0",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d24072ea5d084de8a311e4f85119657c",
+          "Name": "Origin",
+          "Description": "The 3D WCS coordinates specifying the origin of the box. This coordinate represents the center of the bounding box for the object, not a corner\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "eb6ecfd08af645fab8e083e2fc5e4dc8",
+          "Name": "Length",
+          "Description": "The length of the box. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "82e5845ca6c94823a7434083bf4245d1",
+          "Name": "Width",
+          "Description": "The width of the box. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c8377ee58897452787ec0c0343abc318",
+          "Name": "Height",
+          "Description": "The height of the box. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d603d0d6d7654067a8a396e2a8a81a08",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a 3D solid box with edges parallel to the axes of the WCS\n\nAcad3DSolid.CreateBox (AcadBlock: AcadBlock, Origin: Point, Length: double, Width: double, Height: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.CreateCone@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double",
+      "Id": "9fbfcd2f1b184754a0cc20249c3760d6",
+      "Inputs": [
+        {
+          "Id": "4f36934cefa94a6588e46d65083ba38d",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "01fc1e5e5b434ad6a01345fd3d69380d",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates specifying the center of the bounding box\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7b356737cec453cb1dd8f9b5e4bfdbe",
+          "Name": "BaseRadius",
+          "Description": "The radius of the cone base. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6f25a1330907444f87df79a74b7c666e",
+          "Name": "Height",
+          "Description": "The height of the cone. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "610e5e6781af4d43ab984042bcc65e7a",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The 3D WCS coordinates specifying the center of the bounding box\n\nAcad3DSolid.CreateCone (AcadBlock: AcadBlock, Center: Point, BaseRadius: double, Height: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.CreateCylinder@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double",
+      "Id": "ed51f1f582e3498a8a8ce43e7dcd8909",
+      "Inputs": [
+        {
+          "Id": "fe4724225392449aa4de374278e759e6",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "da5515f238924cd4b865af6b5fa66a6f",
+          "Name": "Center",
+          "Description": "A 3D WCS coordinates specifying the center of the bounding box\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "05e9777a48774496b747ba4b17602a4f",
+          "Name": "Radius",
+          "Description": "The cylinder radius. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c4527e335608441cb065ceb79c31dbc7",
+          "Name": "Height",
+          "Description": "The cylinder height. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7726c3cdd448476fa3b03ebf5900b863",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "A 3D WCS coordinates specifying the center of the bounding box\n\nAcad3DSolid.CreateCylinder (AcadBlock: AcadBlock, Center: Point, Radius: double, Height: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.CreateSphere@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double",
+      "Id": "80542635d8ff49f084f62b1ff43f6850",
+      "Inputs": [
+        {
+          "Id": "1f48ae3f1936492b940f9bd311c65f31",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "32e49f73998c4ee99cb48fbcd3805505",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates specifying the sphere center point\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "633d626f0d9b4fb1846fe5f31215e68d",
+          "Name": "Radius",
+          "Description": "The radius of the sphere. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8e4079360b2346b5b601328a3bd75f59",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a sphere given the center and radius\n\nAcad3DSolid.CreateSphere (AcadBlock: AcadBlock, Center: Point, Radius: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.CreateTorus@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double",
+      "Id": "6f65708c7eb0477288b39bcca152dc6b",
+      "Inputs": [
+        {
+          "Id": "aacee2127681427da65a695e3244fddb",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c34a399c06b147a5a3dea084dcde6959",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates in the drawing around which the torus is centered\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "61e389f8f9cc4983a2d7b0f33de22208",
+          "Name": "TorusRadius",
+          "Description": "The distance from the center of the torus to the center of the tube. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7d1c388fb9d040e59cffef5cc5779e66",
+          "Name": "TubeRadius",
+          "Description": "The radius of the tube. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a7d2784b48234d6ea4929390e34aa5f2",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a torus at the given location\n\nAcad3DSolid.CreateTorus (AcadBlock: AcadBlock, Center: Point, TorusRadius: double, TubeRadius: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.Acad3DSolid.CreateWedge@DynNCXLib.AcadBlock,DynNCXLib.GeometryWrapper.Point,double,double,double",
+      "Id": "91c6b16b897d4cbe91418ded7d768112",
+      "Inputs": [
+        {
+          "Id": "424c149b4b7c4419b5e93f192cabfa05",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "017c30a32c604fd1b5f3bbfc5f3d4089",
+          "Name": "Center",
+          "Description": "The 3D WCS coordinates specifying the center of the wedge face\n\nPoint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "57958509b86349e2890d73f20592f8e3",
+          "Name": "Length",
+          "Description": "The length of the wedge corresponding to the X axis. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8e58852d02334941a574c84ed888be04",
+          "Name": "Width",
+          "Description": "The width of the wedge corresponding to the Y axis. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2701887c7eab481aa927ebda4e35277f",
+          "Name": "Height",
+          "Description": "The height of the wedge corresponding to the Z axis. Must be a positive number\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6d508c44febd4239ad8d708b2806e0e5",
+          "Name": "Acad3DSolid",
+          "Description": "Acad3DSolid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a wedge with edges parallel to the axes given the length, width, and height\n\nAcad3DSolid.CreateWedge (AcadBlock: AcadBlock, Center: Point, Length: double, Width: double, Height: double): Acad3DSolid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(0,50,0);\n6;\n4;\n1;",
+      "Id": "8cb5855b620f4162927973fe98a19ffa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "5e72456c01574677991b8b87cc516ba5",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1636b55c0e044caf8cbe3584b9d81fac",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7a19e86f74b34d47b69cc5725e98be4e",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1de0e58430be43af88706e5b20672f13",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(10,50,0);\n3;\n5;",
+      "Id": "3805a3fd54cd43ae899992da4c1a2d23",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "41f220e5ff9249d6b103e872b8510eeb",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f6edfc71b99a4f5eb1dffa294381a523",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "982ff6fc9a8d4121a0903c704b38dbda",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(20,50,0);\n3;\n4;",
+      "Id": "eb29792944634183bb732faf67fbf988",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cccb69f1961745daaf7c2a31a33ec429",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c62a130662534ddabc89eef327668979",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b4561d7a786b4d6886f2466852c48a5b",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(30,50,0);\n3;",
+      "Id": "99c549b2428f4eafa681565a3eafc1dc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "58814fdec0434e3d8b90dc11a6399f9a",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4410eb4adeee4d378c9babf2a8a23778",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(40,50);\n3;\n1;",
+      "Id": "7dd9e33162c44461a5f22415fd22765d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f7af4915c82c4aca9e7230b57c9db38e",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f0497154b1f5487892fbe9ac3e549fa6",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f10b89b920f6430a8a5e757166d9c0a7",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "DynNCXLib.GeometryWrapper.Point.ByCoordinates(50,50,0);\n5;\n4;\n2;",
+      "Id": "1cc19a6c78cc489da826e63e659d7e58",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a1c197aedd5c4cb3acd81a377fa96f92",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "231cb5d8c5be44c8a13ded5b94c30fa4",
+          "Name": "",
+          "Description": "Значение выражения в строке 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e3eaf183b3374dc2a99ae6f59d9111e7",
+          "Name": "",
+          "Description": "Значение выражения в строке 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fb5fdc97235c4f76a1e71bc4be6fb1d7",
+          "Name": "",
+          "Description": "Значение выражения в строке 4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1bf65b10db9f45fcbecc17033425e289",
+      "End": "5c794b986dd7480ab3c986c7775aff1f",
+      "Id": "60e0b0835ecb4842b16505f4bfbddb95",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "579c198609fa41a1a5e6a7deb8479eaf",
+      "End": "c191c73729a740d4a4c8df3dc8e4a500",
+      "Id": "fd8b2d1b35234b6f8b4b3d360281c053",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "579c198609fa41a1a5e6a7deb8479eaf",
+      "End": "497938ecc53641fea2d588b76035a49e",
+      "Id": "b8e9f847ae26485884d948914f2d93c6",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "65031ffb11bd4e3189743ddf11fc394e",
+      "End": "014fe9d7e0cb410090b9cd0ff7289f7e",
+      "Id": "42cf96f2b6b2425687937c182341f702",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b1704f2ee7514b18aeecc1981baccdd8",
+      "End": "b03128f26da7480fbd321292bc9e506a",
+      "Id": "36383b418904453e9193c29b84a8163e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "ce975ed379a042ef888a6e22b68d5ed9",
+      "Id": "3a01fa787ce14b7eadb9273ce077b02f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "e930ffebd47448b894bc30ae3710abe0",
+      "Id": "ce34f8a179594fac993720f6a9d75448",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "e3c7c5b366744af5818d69c4e3a5e20d",
+      "Id": "2c76641fc747443db5f7e550bc44846c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "c5cbad474bc943ceb73d27ddec9d04bf",
+      "Id": "ab149bb10b744964826c9b16c71b23e1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "f1f9c45854064ac3814e06480e23fd17",
+      "Id": "0d69c9bbdb884118bdab07e04225ada4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "5844510c541949319c2bf1e9613b2d2b",
+      "Id": "98e0ae17021c44b085d7374834bfef02",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "bc943a01e8b54348ae66d37fe0c787e9",
+      "Id": "2eac124718b14c92bff6010580611595",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "66bae66f88ef448fa01613c5cf09109e",
+      "Id": "6c7c41699c374c8aad26249c244a0b8a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "51b21b517886453ca0f5fa94246898e0",
+      "Id": "7e4aec6788c641d282205600ec747878",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "4f36934cefa94a6588e46d65083ba38d",
+      "Id": "e6813c7ec9154228affbaad3df804228",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "fe4724225392449aa4de374278e759e6",
+      "Id": "39284ae55ea1447b9011dd536994ef80",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "1f48ae3f1936492b940f9bd311c65f31",
+      "Id": "98b1db8c9f6d40f892030df1583eb8e0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "aacee2127681427da65a695e3244fddb",
+      "Id": "7ead47581f594d6aaf56183b722b417d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "68a19740309e48f88e40abf1e35c875b",
+      "End": "424c149b4b7c4419b5e93f192cabfa05",
+      "Id": "cc4554a470a04309aa14dbfb257b0add",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "2c827df455b6413da3b6c3d16541b197",
+      "End": "984a86bae4d04079ac2ccef33172f2bd",
+      "Id": "93ac348215534ff580de2ace712b0576",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "42e983e0e67d4ed1b94aaa05c4923270",
+      "End": "3bd565e626ba4944b92a38b7cd3ba7d7",
+      "Id": "44e5ed3c91e54af89036dbd8b395d56d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8cd6986ef0174accbcdb540cc4b0ad97",
+      "End": "bb38b67e0a6b46eeb66712176be2a403",
+      "Id": "ac34bfdc5d364012b8e485b48a54d5aa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "61863d3bdb5f4ca49b5216ca75edbe76",
+      "End": "af574c5a9b164753ab2520bddc648787",
+      "Id": "8dd850799f4849829414f5f4bad85ffd",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3cf528e1f52949d8bfd016a6f7c009be",
+      "End": "98799900259c46fe94b3cb3af5b4735e",
+      "Id": "fc82f0939e4e46dba0a6b83f46cbc0e5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d9d275da1f8a4217989aef5494f0945c",
+      "End": "07d828ce79a048e0a1052410ea913c8c",
+      "Id": "999737a3050a4752847c837826baabfa",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a3cd2b9cbbf7499ea9a968abfcc91f26",
+      "End": "116153091c344410a6d391279fc9b1d0",
+      "Id": "77f730aac97e4b6d9a35bd46ba838e79",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "560bad01adc44ecb8614c09806835bbd",
+      "End": "62b497d6b2214f3bad76acbb9fc9da0f",
+      "Id": "2df15ff5fb8e4021ba264b5acc4ae06a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "03f0b69152b84f328eb34cd17f4b7bf1",
+      "End": "7306abb94a434398ab962911a39d1c3a",
+      "Id": "498b4bf31e0745c489ddd8f7030e95e3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "03f0b69152b84f328eb34cd17f4b7bf1",
+      "End": "87434cb87ae248b2937827dd47d5a062",
+      "Id": "0254f1274cff418cafc4edce11811ac7",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "03f0b69152b84f328eb34cd17f4b7bf1",
+      "End": "9a7bf579104246f48bc35cd5e6b274f8",
+      "Id": "93feeea9975f4ad9a7733167e784f64f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0fb63816102c4734979a00472a22c084",
+      "End": "e305c5ca61e74ba2bb3381631d576f99",
+      "Id": "3e92a31a50934afb917976a0284f18ac",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b1018d7eb6454bc9af33409309c69f4d",
+      "End": "b172c90c29974f5c8ee4e52d26a6e6a6",
+      "Id": "0c0f1ca096534e609e9b924faa20ce57",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "589564283af34f1ba41d859949c0ab0c",
+      "End": "e071e9f0ad0c4fe8aff83e0bd7d6da08",
+      "Id": "ada65972ba0f4a8eb265606382c8df3e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4251ab10f5eb4a8b8445b9a737ed0f46",
+      "End": "f10591f69e5c44ae9002506606bc71f4",
+      "Id": "ea95a70ae6c24f9ba2359ecaadc081e5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1e1479d8c49a4c6b88dd29b2465754e2",
+      "End": "ad0c45193fe545ec88f4ac79dd112029",
+      "Id": "1669950f1e7547228a8704cec5f1ffd5",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "eb435b2ddff84207bec553439dee5560",
+      "End": "bfa56c0adeb14ee5a694d56465626fc7",
+      "Id": "7b15a95b91ff447699cceadad6149e58",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fbf6aa0667ee4d189020855a9ebfe954",
+      "End": "9be38ee649244273ab61d8d0297554e5",
+      "Id": "3b905e133d8d4b358b504dcf280405d9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "225855fe8b2f4e9ab1fabbbdf349c246",
+      "End": "0018be71ce0d4c3bad21780a04ab0b3f",
+      "Id": "26a436d8d1344f28addc19da0f966d33",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "be4f19e1b52546da9f74ffeec9fe633a",
+      "End": "e8d1b7c5d0be4b20b4f48225dbd24b72",
+      "Id": "6621e69521d343b2820ad764c57a902f",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "87895522f24e41aab965f886430dea3b",
+      "End": "1e663e253dc843ff840afa337549e47a",
+      "Id": "c24e0a90261f47ad8d60be1e6e353558",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "53cf905929514fc5825d6c583ea65de2",
+      "End": "88785c1d1c1a436c844c1a9210c48f94",
+      "Id": "726a17355ded4e91bb191c1ce66f429b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d71a19da97224a7bb39e8eebee2b8d24",
+      "End": "401676f148934776b45202ae1b41791e",
+      "Id": "297fc4c98d934a4696006debafd31040",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "93c3521d0947450fbe404c8675b4ef41",
+      "End": "04f9465ecdb04474a6e2720ca48db20d",
+      "Id": "68900e06703a469499da0c8b88cfceea",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fd7ec6d6fa5f43f69d65072baeb82ef0",
+      "End": "0defc501b5f2487e8115fbf45923eaef",
+      "Id": "3f6c4520b8d247a8b841b69db12718e3",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "dc27c09b024940159f3d1848b11fd2c9",
+      "End": "ba98cf982de54beeb4d9825a474c2d70",
+      "Id": "d537aaacad514e9a84674125658ac245",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ac09390ffd6f434e8dc516861d5aa7e3",
+      "End": "0043bd555ef04bfcaa9a9d607886b189",
+      "Id": "8f5858202aa94e8d8d92cdf783ac6272",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5e72456c01574677991b8b87cc516ba5",
+      "End": "d24072ea5d084de8a311e4f85119657c",
+      "Id": "c03d272db42b4f87b1a04fadb78cbfe4",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1636b55c0e044caf8cbe3584b9d81fac",
+      "End": "eb6ecfd08af645fab8e083e2fc5e4dc8",
+      "Id": "7a40181c373048758194829d2e6e534c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7a19e86f74b34d47b69cc5725e98be4e",
+      "End": "82e5845ca6c94823a7434083bf4245d1",
+      "Id": "e0fdf3d4a3a3489ab8af4a0aa8940e2e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1de0e58430be43af88706e5b20672f13",
+      "End": "c8377ee58897452787ec0c0343abc318",
+      "Id": "45721df7351c4effa0ede89a439cfd33",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "41f220e5ff9249d6b103e872b8510eeb",
+      "End": "01fc1e5e5b434ad6a01345fd3d69380d",
+      "Id": "5f6fba1da26c47c48322c00ccbd59437",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f6edfc71b99a4f5eb1dffa294381a523",
+      "End": "f7b356737cec453cb1dd8f9b5e4bfdbe",
+      "Id": "e31256317fa34ceea57532e39c2ff943",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "982ff6fc9a8d4121a0903c704b38dbda",
+      "End": "6f25a1330907444f87df79a74b7c666e",
+      "Id": "781a6837ef5c4f74941d57166317e8e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cccb69f1961745daaf7c2a31a33ec429",
+      "End": "da5515f238924cd4b865af6b5fa66a6f",
+      "Id": "7b8063b20986420ba6f5e824a665d68e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "c62a130662534ddabc89eef327668979",
+      "End": "c4527e335608441cb065ceb79c31dbc7",
+      "Id": "429579fa03a0434893b1d6bfe8bdb6e9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "b4561d7a786b4d6886f2466852c48a5b",
+      "End": "05e9777a48774496b747ba4b17602a4f",
+      "Id": "1ebc6dea7ff34dcaa62388c5afb79094",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "58814fdec0434e3d8b90dc11a6399f9a",
+      "End": "32e49f73998c4ee99cb48fbcd3805505",
+      "Id": "e198e040f8694ef2be438c86c5f25017",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "4410eb4adeee4d378c9babf2a8a23778",
+      "End": "633d626f0d9b4fb1846fe5f31215e68d",
+      "Id": "7347eb6c888a40828d62bf1a66864173",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f7af4915c82c4aca9e7230b57c9db38e",
+      "End": "c34a399c06b147a5a3dea084dcde6959",
+      "Id": "c7b097ccebac45378c531db5c2145434",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f0497154b1f5487892fbe9ac3e549fa6",
+      "End": "61e389f8f9cc4983a2d7b0f33de22208",
+      "Id": "d3aba48e7d35417e97404e72e10dc69e",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "f10b89b920f6430a8a5e757166d9c0a7",
+      "End": "7d1c388fb9d040e59cffef5cc5779e66",
+      "Id": "aba079540d594b24ba6d1fbec916256a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a1c197aedd5c4cb3acd81a377fa96f92",
+      "End": "017c30a32c604fd1b5f3bbfc5f3d4089",
+      "Id": "7bde981373f4421ebe78e4f26a3243d1",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "231cb5d8c5be44c8a13ded5b94c30fa4",
+      "End": "57958509b86349e2890d73f20592f8e3",
+      "Id": "d760f1da7e5540bf9bde75e079afe376",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "e3eaf183b3374dc2a99ae6f59d9111e7",
+      "End": "8e58852d02334941a574c84ed888be04",
+      "Id": "86ae145be40e442b9bc3816fcde26885",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "fb5fdc97235c4f76a1e71bc4be6fb1d7",
+      "End": "2701887c7eab481aa927ebda4e35277f",
+      "Id": "83915ee94b784e3ba65bbd22cc3af502",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Link_COM_NCad_and_MST.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "c5e745b1d831491ab843b1bb9abedaf6",
+        "2273b82f37774230b181925d52049d14",
+        "8be4e821c7114d5ebb4f0965b8321124",
+        "eacfc8908aa1430fbc6972778d2ab6c2",
+        "d0989fdee42145c98077f7fa8f827440",
+        "8df1b932e82341578dd20aa99ffe369c",
+        "22f2bce9f23143b79629a2f010cff9f4",
+        "0a842d61cadb460b8c1c4839a41a1646",
+        "33aa31643e9c44519511893cdf9bc1c2",
+        "510a18e194b2400382d5b7f044acae9e",
+        "b359227442fb476d9e103a04e6381e88",
+        "15c0b32e6519494ea5d9e7dd3a2d6d9c",
+        "f9732b8f497843119cb4dee07ca8345e",
+        "1b89638aed394540b9e229edbfe4228e",
+        "97647a2415e04040bd925e3c7df07291",
+        "acdb2ebd667648758d55d01204882e18",
+        "328fd7ea967144fea54b39a6ad91ca72",
+        "9fbfcd2f1b184754a0cc20249c3760d6",
+        "ed51f1f582e3498a8a8ce43e7dcd8909",
+        "80542635d8ff49f084f62b1ff43f6850",
+        "6f65708c7eb0477288b39bcca152dc6b",
+        "91c6b16b897d4cbe91418ded7d768112"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Нет",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.3.4871",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Фоновый просмотр",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "AcadApplication.AcadApplication",
+        "ShowGeometry": true,
+        "Id": "c5e745b1d831491ab843b1bb9abedaf6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1197.0857280987625,
+        "Y": 835.336156022965
+      },
+      {
+        "Name": "AcadApplication.ActiveDocument",
+        "ShowGeometry": true,
+        "Id": "2273b82f37774230b181925d52049d14",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -789.03924370638128,
+        "Y": 834.79312931673417
+      },
+      {
+        "Name": "AcadApplication.AcadApplicationVersions",
+        "ShowGeometry": true,
+        "Id": "8be4e821c7114d5ebb4f0965b8321124",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1719.5158026343854,
+        "Y": 599.70250320588707
+      },
+      {
+        "Name": "AcadDatabase.AcadDatabase",
+        "ShowGeometry": true,
+        "Id": "eacfc8908aa1430fbc6972778d2ab6c2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -300.02582341164134,
+        "Y": 813.111127062229
+      },
+      {
+        "Name": "AcadDatabase.ModelSpace",
+        "ShowGeometry": true,
+        "Id": "d0989fdee42145c98077f7fa8f827440",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 232.54905884239179,
+        "Y": 872.788512638541
+      },
+      {
+        "Name": "AcadDocument.FullName",
+        "ShowGeometry": true,
+        "Id": "8df1b932e82341578dd20aa99ffe369c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -298.00907205359135,
+        "Y": 941.42221904581811
+      },
+      {
+        "Name": "Acad3DSolid.AddEllipticalCone",
+        "ShowGeometry": true,
+        "Id": "22f2bce9f23143b79629a2f010cff9f4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3123.6823197822641,
+        "Y": 803.04182216764968
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "b8878c80a47945828faa8c943d548034",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2423.1260029964596,
+        "Y": 919.26144480824246
+      },
+      {
+        "Name": "Acad3DSolid.AddEllipticalCylinder",
+        "ShowGeometry": true,
+        "Id": "0a842d61cadb460b8c1c4839a41a1646",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3177.7162865475252,
+        "Y": 1204.8025431590406
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "1f3d1923525f4907809b248bc306abc0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2420.2450456108422,
+        "Y": 1198.5253561926218
+      },
+      {
+        "Name": "Acad3DSolid.AddExtrudedSolid",
+        "ShowGeometry": true,
+        "Id": "33aa31643e9c44519511893cdf9bc1c2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3296.4474113407159,
+        "Y": 1710.6815234491733
+      },
+      {
+        "Name": "AcadRegion.AcadRegion",
+        "ShowGeometry": true,
+        "Id": "510a18e194b2400382d5b7f044acae9e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2810.9287783487021,
+        "Y": 1759.7117818708932
+      },
+      {
+        "Name": "AcadCircle.AcadCircle",
+        "ShowGeometry": true,
+        "Id": "b359227442fb476d9e103a04e6381e88",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2185.7691030435076,
+        "Y": 1749.4968256190696
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "bcd10b04bbf3433cb2eefdd311b80f56",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1540.4287710960696,
+        "Y": 1772.2877289944552
+      },
+      {
+        "Name": "List Create",
+        "ShowGeometry": true,
+        "Id": "bb107c18baac436bbaac247ced938c72",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2515.8707718186843,
+        "Y": 1763.6694364190632
+      },
+      {
+        "Name": "Acad3DSolid.AddExtrudedSolidAlongPath",
+        "ShowGeometry": true,
+        "Id": "15c0b32e6519494ea5d9e7dd3a2d6d9c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3368.6079665192137,
+        "Y": 2152.1799200678665
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "94f7d2ff22b044c094214d983b75111e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2147.8323149507423,
+        "Y": 2178.9137637871131
+      },
+      {
+        "Name": "AcadSpline.AcadSpline",
+        "ShowGeometry": true,
+        "Id": "f9732b8f497843119cb4dee07ca8345e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2851.8882192747583,
+        "Y": 2145.4795424723206
+      },
+      {
+        "Name": "Acad3DSolid.AddRevolvedSolid",
+        "ShowGeometry": true,
+        "Id": "1b89638aed394540b9e229edbfe4228e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3438.7071837541371,
+        "Y": 2522.7060635003045
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "6445fc8696c344b292eb7e8e9c3ecea7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2370.1266819298608,
+        "Y": 2601.4631923080992
+      },
+      {
+        "Name": "Acad3DSolid.Boolean",
+        "ShowGeometry": true,
+        "Id": "97647a2415e04040bd925e3c7df07291",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4470.9104879862416,
+        "Y": 2313.0920631861709
+      },
+      {
+        "Name": "AcBooleanType.acUnion",
+        "ShowGeometry": true,
+        "Id": "acdb2ebd667648758d55d01204882e18",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3993.1568860696884,
+        "Y": 2353.1133073257774
+      },
+      {
+        "Name": "Acad3DSolid.CreateBox",
+        "ShowGeometry": true,
+        "Id": "328fd7ea967144fea54b39a6ad91ca72",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3485.6067919464085,
+        "Y": 2933.9742012716092
+      },
+      {
+        "Name": "Acad3DSolid.CreateCone",
+        "ShowGeometry": true,
+        "Id": "9fbfcd2f1b184754a0cc20249c3760d6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3468.4601469831314,
+        "Y": 3333.7720472487117
+      },
+      {
+        "Name": "Acad3DSolid.CreateCylinder",
+        "ShowGeometry": true,
+        "Id": "ed51f1f582e3498a8a8ce43e7dcd8909",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3498.40860634282,
+        "Y": 3724.0850811971068
+      },
+      {
+        "Name": "Acad3DSolid.CreateSphere",
+        "ShowGeometry": true,
+        "Id": "80542635d8ff49f084f62b1ff43f6850",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3485.4313316681578,
+        "Y": 4087.2612883253937
+      },
+      {
+        "Name": "Acad3DSolid.CreateTorus",
+        "ShowGeometry": true,
+        "Id": "6f65708c7eb0477288b39bcca152dc6b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3481.7087602274314,
+        "Y": 4406.1145003778656
+      },
+      {
+        "Name": "Acad3DSolid.CreateWedge",
+        "ShowGeometry": true,
+        "Id": "91c6b16b897d4cbe91418ded7d768112",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3555.0746060823908,
+        "Y": 4798.6327292854912
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "8cb5855b620f4162927973fe98a19ffa",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2404.1819471826129,
+        "Y": 3000.4278317312219
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "3805a3fd54cd43ae899992da4c1a2d23",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2409.4047839588416,
+        "Y": 3377.6700996309455
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "eb29792944634183bb732faf67fbf988",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2472.679148459612,
+        "Y": 3757.0878239485382
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "99c549b2428f4eafa681565a3eafc1dc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2439.4641036668991,
+        "Y": 4107.54757752471
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "7dd9e33162c44461a5f22415fd22765d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2449.7984239328862,
+        "Y": 4452.3250919949605
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "1cc19a6c78cc489da826e63e659d7e58",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2474.8912325555275,
+        "Y": 4798.03183554006
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "b2b1778c42a04dc9a112c76d43e560f4",
+        "Title": "Get document\r\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "8be4e821c7114d5ebb4f0965b8321124",
+          "c5e745b1d831491ab843b1bb9abedaf6",
+          "2273b82f37774230b181925d52049d14",
+          "eacfc8908aa1430fbc6972778d2ab6c2",
+          "8df1b932e82341578dd20aa99ffe369c"
+        ],
+        "HasNestedGroups": false,
+        "Left": -1729.5158026343854,
+        "Top": 483.70250320588707,
+        "Width": 1737.4899792227441,
+        "Height": 589.719715839931,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 599.70250320588707,
+        "InitialHeight": 486.71971583993104,
+        "TextblockHeight": 106.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "8dbc6286e34649dd936e602f47791ce4",
+        "Title": "Elliptical Cone",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "22f2bce9f23143b79629a2f010cff9f4",
+          "b8878c80a47945828faa8c943d548034"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2413.1260029964596,
+        "Top": 730.04182216764968,
+        "Width": 1022.5563167858045,
+        "Height": 363.21962264059277,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 803.04182216764968,
+        "InitialHeight": 261.21962264059277,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "1d62273ac63242ae9de2662ce4109475",
+        "Title": "Elliptical cylinder",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "0a842d61cadb460b8c1c4839a41a1646",
+          "1f3d1923525f4907809b248bc306abc0"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2410.2450456108422,
+        "Top": 1125.5253561926218,
+        "Width": 1104.471240936683,
+        "Height": 346.27718696641887,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1198.5253561926218,
+        "InitialHeight": 151.27718696641887,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "3575466dd0ae4cdd8cf6147ba05a11cb",
+        "Title": "Create extruded solid",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "33aa31643e9c44519511893cdf9bc1c2",
+          "510a18e194b2400382d5b7f044acae9e",
+          "b359227442fb476d9e103a04e6381e88",
+          "bcd10b04bbf3433cb2eefdd311b80f56",
+          "bb107c18baac436bbaac247ced938c72"
+        ],
+        "HasNestedGroups": false,
+        "Left": 1530.4287710960696,
+        "Top": 1637.6815234491733,
+        "Width": 2082.0186402446461,
+        "Height": 308.81530216989631,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 1710.6815234491733,
+        "InitialHeight": 206.60620554528191,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "d747aed397e346d7aeb269f6e79b1b4e",
+        "Title": "Create ExtrudedSolidAlongPath (with Spline)",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "15c0b32e6519494ea5d9e7dd3a2d6d9c",
+          "94f7d2ff22b044c094214d983b75111e",
+          "f9732b8f497843119cb4dee07ca8345e"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2137.8323149507423,
+        "Top": 2072.4795424723206,
+        "Width": 1624.7756515684714,
+        "Height": 305.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2145.4795424723206,
+        "InitialHeight": 178.43422131479247,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "017e23f1f7fe43f9be1bf3f78ca20833",
+        "Title": "Create RevolvedSolid",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "1b89638aed394540b9e229edbfe4228e",
+          "6445fc8696c344b292eb7e8e9c3ecea7"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2360.1266819298608,
+        "Top": 2449.7060635003045,
+        "Width": 1395.5805018242763,
+        "Height": 340.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2522.7060635003045,
+        "InitialHeight": 223.75712880779474,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "031b8d29c1934e33a8c0f7b67d6537bc",
+        "Title": "Create solid as union two solids",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "97647a2415e04040bd925e3c7df07291",
+          "acdb2ebd667648758d55d01204882e18"
+        ],
+        "HasNestedGroups": false,
+        "Left": 3983.1568860696884,
+        "Top": 2240.0920631861709,
+        "Width": 772.75360191655318,
+        "Height": 270.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2313.0920631861709,
+        "InitialHeight": 185.02124413960655,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "f71cce83674245f68344bc9ac3ae01d8",
+        "Title": "Create Box",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "328fd7ea967144fea54b39a6ad91ca72",
+          "8cb5855b620f4162927973fe98a19ffa"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2394.1819471826129,
+        "Top": 2860.9742012716092,
+        "Width": 1363.4248447637956,
+        "Height": 340.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 2933.9742012716092,
+        "InitialHeight": 211.45363045961267,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "20d3d66217bf4f4787e8dd652fbcd747",
+        "Title": "Create Cone",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "9fbfcd2f1b184754a0cc20249c3760d6",
+          "3805a3fd54cd43ae899992da4c1a2d23"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2399.4047839588416,
+        "Top": 3260.7720472487117,
+        "Width": 1349.0553630242898,
+        "Height": 305.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3333.7720472487117,
+        "InitialHeight": 188.8980523822338,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "0bce139ee59d4723943c328fce7b27e0",
+        "Title": "Create Cylinder",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "ed51f1f582e3498a8a8ce43e7dcd8909",
+          "eb29792944634183bb732faf67fbf988"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2462.679148459612,
+        "Top": 3651.0850811971068,
+        "Width": 1325.7294578832079,
+        "Height": 305.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 3724.0850811971068,
+        "InitialHeight": 178.00274275143147,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "acdcb856512148989afae19311e2f66d",
+        "Title": "Create Sphere",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "80542635d8ff49f084f62b1ff43f6850",
+          "99c549b2428f4eafa681565a3eafc1dc"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2429.4641036668991,
+        "Top": 4014.2612883253937,
+        "Width": 1337.9672280012587,
+        "Height": 269.99999999999955,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 4087.2612883253937,
+        "InitialHeight": 165.28628919931589,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "dcac718d238a4d0fb55aa170a3440d95",
+        "Title": "Create Wedge",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "91c6b16b897d4cbe91418ded7d768112",
+          "1cc19a6c78cc489da826e63e659d7e58"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2464.8912325555275,
+        "Top": 4725.03183554006,
+        "Width": 1370.1833735268633,
+        "Height": 340.60089374543168,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 4798.03183554006,
+        "InitialHeight": 145.60089374543168,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "e8d6533eb9bc4bf8b6ef49be0324c0f1",
+        "Title": "Create Torus",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "6f65708c7eb0477288b39bcca152dc6b",
+          "7dd9e33162c44461a5f22415fd22765d"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2439.7984239328862,
+        "Top": 4333.1145003778656,
+        "Width": 1325.9103362945452,
+        "Height": 317.0,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 4406.1145003778656,
+        "InitialHeight": 197.26608651762308,
+        "TextblockHeight": 63.0,
+        "Background": "#FFC1D676"
+      }
+    ],
+    "X": -2137.2387993256702,
+    "Y": -4042.5818278685138,
+    "Zoom": 0.94527296517049653
+  }
+}

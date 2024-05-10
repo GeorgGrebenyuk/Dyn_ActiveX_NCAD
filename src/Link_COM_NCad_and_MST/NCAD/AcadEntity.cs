@@ -50,6 +50,40 @@ namespace DynNCXLib
             return es;
         }
 
+        /// <summary>
+        /// Get entities in target block by it's EntityName
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="EntityNames"></param>
+        /// <returns></returns>
+        public static List<AcadEntity> GetEntitiesByEntityNames (AcadBlock AcadBlock, List<string> EntityNames)
+        {
+            List<AcadEntity> es = new List<AcadEntity>();
+            foreach (OdaX.AcadEntity ent in AcadBlock._i)
+            {
+                if (EntityNames.Contains(ent.EntityName)) es.Add(new AcadEntity(ent));
+
+            }
+            return es;
+        }
+
+        /// <summary>
+        /// Get entities in target block by it's ObjectName
+        /// </summary>
+        /// <param name="AcadBlock"></param>
+        /// <param name="ObjectNames"></param>
+        /// <returns></returns>
+        public static List<AcadEntity> GetEntitiesByObjectNames(AcadBlock AcadBlock, List<string> ObjectNames)
+        {
+            List<AcadEntity> es = new List<AcadEntity>();
+            foreach (OdaX.AcadEntity ent in AcadBlock._i)
+            {
+                if (ObjectNames.Contains(ent.ObjectName)) es.Add(new AcadEntity(ent));
+
+            }
+            return es;
+        }
+
         ///<summary>
         ///Specifies the True Color of an object
         ///</summary>

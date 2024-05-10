@@ -40,7 +40,6 @@ namespace DynmdsUnitsLib
 			for(int i = 0; i < this._i.Count; i++)
 			{
                 els.Add(new Element(this._i.Item(i)));
-
             }
 			return els;	
 

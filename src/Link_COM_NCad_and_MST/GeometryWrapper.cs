@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using dr = Autodesk.DesignScript.Runtime;
+
 namespace DynNCXLib.GeometryWrapper
 {
     public class Point
@@ -35,6 +37,17 @@ namespace DynNCXLib.GeometryWrapper
             Point p = new Point(x, y, z);
             return p;
         }
+
+        [dr.MultiReturn(new[] { "X", "Y", "Z" })]
+        public Dictionary<string, double> Coordinates()
+        {
+            return new Dictionary<string, double>()
+            {
+                    { "X", this.X},
+                    { "Y", this.Y},
+                    { "Z", this.Z}
+            };
+        }
         public double X => this.x;
         public double Y => this.y;
         public double Z => this.z;
@@ -64,6 +77,17 @@ namespace DynNCXLib.GeometryWrapper
         {
             Vector p = new Vector(x, y, z);
             return p;
+        }
+
+        [dr.MultiReturn(new[] { "X", "Y", "Z" })]
+        public Dictionary<string, double> Coordinates()
+        {
+            return new Dictionary<string, double>()
+            {
+                    { "X", this.X},
+                    { "Y", this.Y},
+                    { "Z", this.Z}
+            };
         }
         public double X => this.x;
         public double Y => this.y;

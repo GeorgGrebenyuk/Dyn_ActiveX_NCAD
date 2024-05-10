@@ -1,4 +1,6 @@
-﻿namespace DynmdsLibManagerLib 
+﻿using DynmdsUnitsLib;
+
+namespace DynmdsLibManagerLib 
 {
 
 	///<summary>
@@ -31,7 +33,7 @@
 		///<summary>
 		///Параметры объекта
 		///</summary>
-		public dynamic RootElement => this._i.RootElement;
+		public Element RootElement => new Element(this._i.RootElement);
 
 		///<summary>
 		///GUID объекта

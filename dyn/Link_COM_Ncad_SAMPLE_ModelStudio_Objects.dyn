@@ -1,0 +1,1109 @@
+{
+  "Uuid": "161c088f-3e9d-4b56-841d-ff17c76f1b74",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Link_COM_Ncad_SAMPLE_ModelStudio_Objects",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadApplication.AcadApplicationVersions",
+      "Id": "89e438de051949f6b906884693fd5742",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cf901791ca1d4c288355b13611f5c8c2",
+          "Name": "nanoCAD 3.5",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a0a0614b0764b169159c9c1458995c7",
+          "Name": "nanoCAD 9",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b371f5d2033c48548c2bcb3d63733867",
+          "Name": "nanoCAD Plus 10",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2ad2216fe74f4814a859708ed979f241",
+          "Name": "nanoCAD Plus 11",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9e5d1d6e33e243e08a88c18a494558dc",
+          "Name": "nanoCAD Plus 12",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4bde66d6903e4d47adc50975edd05a1c",
+          "Name": "nanoCAD Plus 21",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9fef97dc9602446c8195fa3216992339",
+          "Name": "nanoCAD 22",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "55e647ccd1074c9ba359f77b6dddb6cb",
+          "Name": "nanoCAD 23",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90ba21d4bccc4fb3b8b8c34e893098f8",
+          "Name": "nanoCAD 24.0",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "24b246caefa841af9b19ff02960e401d",
+          "Name": "nanoCAD 24.1",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get ProgID identificators for nanoCAD\n\nAcadApplication.AcadApplicationVersions ( ): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadApplication.AcadApplication@string",
+      "Id": "a98d08c2b5534c888dc05f6e14446325",
+      "Inputs": [
+        {
+          "Id": "83001a39e6c44b528e1f02ab896ec74a",
+          "Name": "progID",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "314a88ecedf649e7a1c0d95299a8b8dd",
+          "Name": "AcadApplication",
+          "Description": "AcadApplication",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Use AcadApplicationVersions to get progID data\n\nAcadApplication.AcadApplication (progID: string): AcadApplication"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadApplication.ActiveDocument",
+      "Id": "60ce65b11c854fd9bbc453aacc261f5e",
+      "Inputs": [
+        {
+          "Id": "ab8b29c703504435bbf781dc2d2185e4",
+          "Name": "acadApplication",
+          "Description": "DynNCXLib.AcadApplication",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5da795d7bd5b42d48b3b5bc6911b6a74",
+          "Name": "AcadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get active drawing if it exists\n\nAcadApplication.ActiveDocument: AcadDocument"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadDatabase.AcadDatabase@DynNCXLib.AcadDocument",
+      "Id": "c22d245429b34256b3abbb427af8d8cb",
+      "Inputs": [
+        {
+          "Id": "151dacacd2ab4b98ad3bd6bfd296446d",
+          "Name": "AcadDocument",
+          "Description": "AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "89987edfa618495fba828932a4b53672",
+          "Name": "AcadDatabase",
+          "Description": "AcadDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Getting AcadDatabase from Document\n\nAcadDatabase.AcadDatabase (AcadDocument: AcadDocument): AcadDatabase"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadBlock.GetObjects",
+      "Id": "d85d39c649a44f8ca2ede5c4acccebb9",
+      "Inputs": [
+        {
+          "Id": "0c9cdedce87947b5b0fe5d5e82857671",
+          "Name": "acadBlock",
+          "Description": "DynNCXLib.AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d049aca99fb54fa28b56ca03bc1cffd5",
+          "Name": "AcadEntity[]",
+          "Description": "AcadEntity[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Getting all objects at that block\n\nAcadBlock.GetObjects ( ): AcadEntity[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadDatabase.ModelSpace",
+      "Id": "5a9880c5b4194140a5edcdbde4f4ea3a",
+      "Inputs": [
+        {
+          "Id": "9e2177b7fe684d629fac3033dd8be9c7",
+          "Name": "acadDatabase",
+          "Description": "DynNCXLib.AcadDatabase",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "51f696d7045e42f9b576aa1124a831ff",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the ModelSpace collection for the document\n\nAcadDatabase.ModelSpace: AcadBlock"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynmdsUnitsLib.Element.FromEntiy@var",
+      "Id": "029c0417629b41b38befd2cbde269c94",
+      "Inputs": [
+        {
+          "Id": "4a6b60d8464b47bebec797527ce2dbfb",
+          "Name": "AcadEntity",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "300e39bb4b714641b6c1972c74b43088",
+          "Name": "Element",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Возвращает Element от объекта, если это параметрический объект\n\nElement.FromEntiy (AcadEntity: var): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadDocument.FullName",
+      "Id": "00d746a9178143d292fa69bec2f9ff23",
+      "Inputs": [
+        {
+          "Id": "18fbc6b8a924447382e6c775a5e2cae8",
+          "Name": "acadDocument",
+          "Description": "DynNCXLib.AcadDocument",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e141adda72974f7d90cf552c9e0c2f1d",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Gets the name of the application or document, including the path\n\nAcadDocument.FullName: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadEntity.EntityName",
+      "Id": "38d6357451a449c6bab54d4eccd5fe2d",
+      "Inputs": [
+        {
+          "Id": "47f4b1a50de3492d9b9a43665da9540d",
+          "Name": "acadEntity",
+          "Description": "DynNCXLib.AcadEntity",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "06bb803cf1884c738648512c70366a5d",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "AcadEntity.EntityName: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "==@var[]..[],var[]..[]",
+      "Id": "4e4e84058fd448d7be98ffcac6c3a886",
+      "Inputs": [
+        {
+          "Id": "24fba3d8831644f8ab9acf71f2783424",
+          "Name": "x",
+          "Description": "Стандартный объект для сравнения (например, bool, int, double, string и т. д.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "09e253baa20c493897f92d26243237c2",
+          "Name": "y",
+          "Description": "Стандартный объект для сравнения (например, bool, int, double, string и т. д.)\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7ab4541c61be4536a72b82eeb7590cb6",
+          "Name": "bool",
+          "Description": "Результат проверки равенства",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Сравнение для определения того, равны ли значения X и Y\n\n== (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"CAECLinearWall\";",
+      "Id": "fc98f1c9002e424fa5c052ab2562be79",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "121d7148a2b54d0880902172688563d2",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "1f5399f2941846d190224e9dfb2e9e34",
+      "Inputs": [
+        {
+          "Id": "fa95bc9cd36946eb840546b749286627",
+          "Name": "list",
+          "Description": "Список, который требуется отфильтровать.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8241a8b899fc4322beb3639ee27ce7f3",
+          "Name": "mask",
+          "Description": "Список логических операций, представляющих маску.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cc8ad12dc8054d3793dd333574b40aae",
+          "Name": "in",
+          "Description": "Элементы, индекс маски которых имеет значение «истина».",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f6d012548a1494cb385b3b474becb1b",
+          "Name": "out",
+          "Description": "Элементы, индекс маски которых имеет значение «ложь».",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Фильтрация последовательности путем поиска соответствующих индексов в отдельном списке логических операций.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynmdsUnitsLib.Element.Parameters",
+      "Id": "c98b917dcfd945269ba0cadeb569046a",
+      "Inputs": [
+        {
+          "Id": "010a667a0d8944ae8e246e30ff08d462",
+          "Name": "element",
+          "Description": "DynmdsUnitsLib.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "44b4d8ee42db467b9f1d3238d5336e00",
+          "Name": "Parameters",
+          "Description": "Parameters",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Параметры\n\nElement.Parameters: Parameters"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynmdsUnitsLib.Parameters.GetParameters",
+      "Id": "5cdf6398678748e180518b1fc000824f",
+      "Inputs": [
+        {
+          "Id": "8c97985e918a4c5eaf2e658d4b157555",
+          "Name": "parameters",
+          "Description": "DynmdsUnitsLib.Parameters",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8d043ce7a33c4096ae18ac3a79d45952",
+          "Name": "Parameter[]",
+          "Description": "Parameter[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Возвращает набор параметров\n\nParameters.GetParameters ( ): Parameter[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynmdsUnitsLib.Parameter.Name",
+      "Id": "c04106dbe34a4d64af267bc0e7cefb8a",
+      "Inputs": [
+        {
+          "Id": "d5dd136ac47d46cea398c2e92caca065",
+          "Name": "parameter",
+          "Description": "DynmdsUnitsLib.Parameter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "92ee211a53ce44e4ba7b417095926efa",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "property Name\n\nParameter.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynmdsUnitsLib.Parameter.Value",
+      "Id": "8ec5965ff1ca4c7aa212e34a6052af36",
+      "Inputs": [
+        {
+          "Id": "11080c7af967472c9f21328e49ff5da4",
+          "Name": "parameter",
+          "Description": "DynmdsUnitsLib.Parameter",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6c5069ad806e4dc5b0032ebde599b664",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "property Value\n\nParameter.Value: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DynNCXLib.AcadEntity.GetEntitiesByEntityNames@DynNCXLib.AcadBlock,string[]",
+      "Id": "64ef30daca904c07b90b01fb3dead331",
+      "Inputs": [
+        {
+          "Id": "4a2cb6ccf1f34deabe51fb1361a764ee",
+          "Name": "AcadBlock",
+          "Description": "AcadBlock",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ffcc4839a6714837b40dee0117a91a9f",
+          "Name": "EntityNames",
+          "Description": "string[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f5bdaf75c84247d1acd9567ec1a2f1de",
+          "Name": "AcadEntity[]",
+          "Description": "AcadEntity[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get entities in target block by it's EntityName\n\nAcadEntity.GetEntitiesByEntityNames (AcadBlock: AcadBlock, EntityNames: string[]): AcadEntity[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[\"CAECLinearWall\"];",
+      "Id": "4be8f622074847d197a3c8fb2a786b40",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1b79fcb85d37455091883ec9aa94e7cc",
+          "Name": "",
+          "Description": "Значение выражения в строке 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Обеспечивает возможность непосредственного авторства кода DesignScript"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "9fef97dc9602446c8195fa3216992339",
+      "End": "83001a39e6c44b528e1f02ab896ec74a",
+      "Id": "6ca66c10fd1244c7b7f7bbddda3b35ca",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "314a88ecedf649e7a1c0d95299a8b8dd",
+      "End": "ab8b29c703504435bbf781dc2d2185e4",
+      "Id": "957996a5253c48a093eacb7027aa2de0",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5da795d7bd5b42d48b3b5bc6911b6a74",
+      "End": "151dacacd2ab4b98ad3bd6bfd296446d",
+      "Id": "e514dace5a1c4914a1bb44471d78fdfe",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5da795d7bd5b42d48b3b5bc6911b6a74",
+      "End": "18fbc6b8a924447382e6c775a5e2cae8",
+      "Id": "2176250f14724e12acacade6c70a734b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "89987edfa618495fba828932a4b53672",
+      "End": "9e2177b7fe684d629fac3033dd8be9c7",
+      "Id": "7202fc03df0741159ac8693ae41e9c6c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d049aca99fb54fa28b56ca03bc1cffd5",
+      "End": "47f4b1a50de3492d9b9a43665da9540d",
+      "Id": "cd879224a16845e0aa1fd2d03411da99",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "d049aca99fb54fa28b56ca03bc1cffd5",
+      "End": "fa95bc9cd36946eb840546b749286627",
+      "Id": "19a0ea6880884624ab3b3ce3f2eb6019",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "51f696d7045e42f9b576aa1124a831ff",
+      "End": "0c9cdedce87947b5b0fe5d5e82857671",
+      "Id": "8f0b070ac26141fa8315551603495c61",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "51f696d7045e42f9b576aa1124a831ff",
+      "End": "4a2cb6ccf1f34deabe51fb1361a764ee",
+      "Id": "4634571da1124e2a80e4f97e08633a11",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "300e39bb4b714641b6c1972c74b43088",
+      "End": "010a667a0d8944ae8e246e30ff08d462",
+      "Id": "e44a37601aba4299aafb940180204d4c",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "06bb803cf1884c738648512c70366a5d",
+      "End": "24fba3d8831644f8ab9acf71f2783424",
+      "Id": "9a51bb6625b04a47ab974f00fc1ca6a9",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "7ab4541c61be4536a72b82eeb7590cb6",
+      "End": "8241a8b899fc4322beb3639ee27ce7f3",
+      "Id": "8b55ba0d148040739931a5436e7049cb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "121d7148a2b54d0880902172688563d2",
+      "End": "09e253baa20c493897f92d26243237c2",
+      "Id": "3db66251f7ae4fecbe7bb7b7deaaba49",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "cc8ad12dc8054d3793dd333574b40aae",
+      "End": "4a6b60d8464b47bebec797527ce2dbfb",
+      "Id": "918d68f7e1394bcdbb383314a9b109f2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "44b4d8ee42db467b9f1d3238d5336e00",
+      "End": "8c97985e918a4c5eaf2e658d4b157555",
+      "Id": "fce0f13f6785470f998fc1ab6629c284",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8d043ce7a33c4096ae18ac3a79d45952",
+      "End": "d5dd136ac47d46cea398c2e92caca065",
+      "Id": "67d77f363f434186a852d5ae9d4e9f7d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "8d043ce7a33c4096ae18ac3a79d45952",
+      "End": "11080c7af967472c9f21328e49ff5da4",
+      "Id": "1a9817b83f704f9b98635164f40d3755",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1b79fcb85d37455091883ec9aa94e7cc",
+      "End": "ffcc4839a6714837b40dee0117a91a9f",
+      "Id": "f1a5742e23ff40a6aac2cb5ee24a897f",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "Link_COM_NCad_and_MST.dll",
+      "ReferenceType": "ZeroTouch",
+      "Nodes": [
+        "89e438de051949f6b906884693fd5742",
+        "a98d08c2b5534c888dc05f6e14446325",
+        "60ce65b11c854fd9bbc453aacc261f5e",
+        "c22d245429b34256b3abbb427af8d8cb",
+        "d85d39c649a44f8ca2ede5c4acccebb9",
+        "5a9880c5b4194140a5edcdbde4f4ea3a",
+        "029c0417629b41b38befd2cbde269c94",
+        "00d746a9178143d292fa69bec2f9ff23",
+        "38d6357451a449c6bab54d4eccd5fe2d",
+        "c98b917dcfd945269ba0cadeb569046a",
+        "5cdf6398678748e180518b1fc000824f",
+        "c04106dbe34a4d64af267bc0e7cefb8a",
+        "8ec5965ff1ca4c7aa212e34a6052af36",
+        "64ef30daca904c07b90b01fb3dead331"
+      ]
+    },
+    {
+      "Name": "ms_test_str_resh_1.dwg",
+      "ReferenceType": "External",
+      "Nodes": [
+        "00d746a9178143d292fa69bec2f9ff23"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.12",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "Нет",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.17.3.4871",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Фоновый просмотр",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "AcadApplication.AcadApplicationVersions",
+        "ShowGeometry": true,
+        "Id": "89e438de051949f6b906884693fd5742",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -103.56893781797589,
+        "Y": 24.6744621970696
+      },
+      {
+        "Name": "AcadApplication.AcadApplication",
+        "ShowGeometry": true,
+        "Id": "a98d08c2b5534c888dc05f6e14446325",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 418.861136717647,
+        "Y": 260.30811501414837
+      },
+      {
+        "Name": "AcadApplication.ActiveDocument",
+        "ShowGeometry": true,
+        "Id": "60ce65b11c854fd9bbc453aacc261f5e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 826.907621110027,
+        "Y": 259.76508830791681
+      },
+      {
+        "Name": "AcadDatabase.AcadDatabase",
+        "ShowGeometry": true,
+        "Id": "c22d245429b34256b3abbb427af8d8cb",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1315.9210414047739,
+        "Y": 238.08308605341242
+      },
+      {
+        "Name": "AcadBlock.GetObjects",
+        "ShowGeometry": true,
+        "Id": "d85d39c649a44f8ca2ede5c4acccebb9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2309.98114510449,
+        "Y": 363.39378360163408
+      },
+      {
+        "Name": "AcadDatabase.ModelSpace",
+        "ShowGeometry": true,
+        "Id": "5a9880c5b4194140a5edcdbde4f4ea3a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1905.2135407739049,
+        "Y": 336.59940652818983
+      },
+      {
+        "Name": "Element.FromEntiy",
+        "ShowGeometry": true,
+        "Id": "029c0417629b41b38befd2cbde269c94",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3821.1248548856565,
+        "Y": 430.8031220765771
+      },
+      {
+        "Name": "AcadDocument.FullName",
+        "ShowGeometry": true,
+        "Id": "00d746a9178143d292fa69bec2f9ff23",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1317.9377927628243,
+        "Y": 366.39417803700064
+      },
+      {
+        "Name": "AcadEntity.EntityName",
+        "ShowGeometry": true,
+        "Id": "38d6357451a449c6bab54d4eccd5fe2d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2667.0740812381541,
+        "Y": 378.96886146020722
+      },
+      {
+        "Name": "==",
+        "ShowGeometry": true,
+        "Id": "4e4e84058fd448d7be98ffcac6c3a886",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3285.8440806210665,
+        "Y": 389.85468238706346
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "fc98f1c9002e424fa5c052ab2562be79",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3002.6480270684115,
+        "Y": 421.3869551346296
+      },
+      {
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Id": "1f5399f2941846d190224e9dfb2e9e34",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3498.6521991369777,
+        "Y": 310.37517750086033
+      },
+      {
+        "Name": "Element.Parameters",
+        "ShowGeometry": true,
+        "Id": "c98b917dcfd945269ba0cadeb569046a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4186.3755211668549,
+        "Y": 433.1529059437496
+      },
+      {
+        "Name": "Parameters.GetParameters",
+        "ShowGeometry": true,
+        "Id": "5cdf6398678748e180518b1fc000824f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4527.6578643094435,
+        "Y": 434.64322185266928
+      },
+      {
+        "Name": "Parameter.Name",
+        "ShowGeometry": true,
+        "Id": "c04106dbe34a4d64af267bc0e7cefb8a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4861.4886279074317,
+        "Y": 443.58511730618687
+      },
+      {
+        "Name": "Parameter.Value",
+        "ShowGeometry": true,
+        "Id": "8ec5965ff1ca4c7aa212e34a6052af36",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 5172.7327082819729,
+        "Y": 434.38026059894526
+      },
+      {
+        "Name": "AcadEntity.GetEntitiesByEntityNames",
+        "ShowGeometry": true,
+        "Id": "64ef30daca904c07b90b01fb3dead331",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2784.4220721005336,
+        "Y": 811.90723486737954
+      },
+      {
+        "Name": "Code Block",
+        "ShowGeometry": true,
+        "Id": "4be8f622074847d197a3c8fb2a786b40",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2225.02916857162,
+        "Y": 870.84891526789113
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "377f1a0eb77947b08db3605a21dfe875",
+        "Title": "Get document\r\n",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "89e438de051949f6b906884693fd5742",
+          "a98d08c2b5534c888dc05f6e14446325",
+          "60ce65b11c854fd9bbc453aacc261f5e",
+          "c22d245429b34256b3abbb427af8d8cb",
+          "00d746a9178143d292fa69bec2f9ff23"
+        ],
+        "HasNestedGroups": false,
+        "Left": -113.56893781797589,
+        "Top": -91.3255378029304,
+        "Width": 1737.4899792227498,
+        "Height": 589.719715839931,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 24.6744621970696,
+        "InitialHeight": 486.71971583993104,
+        "TextblockHeight": 106.0,
+        "Background": "#FFC1D676"
+      },
+      {
+        "Id": "bdffb46c387247449ab173fcdcd59b01",
+        "Title": "Get ModelStudio object by class's name",
+        "DescriptionText": null,
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "38d6357451a449c6bab54d4eccd5fe2d",
+          "4e4e84058fd448d7be98ffcac6c3a886",
+          "fc98f1c9002e424fa5c052ab2562be79",
+          "1f5399f2941846d190224e9dfb2e9e34",
+          "d85d39c649a44f8ca2ede5c4acccebb9"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2299.98114510449,
+        "Top": 237.37517750086033,
+        "Width": 1443.6710540324875,
+        "Height": 316.01177763376927,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 310.37517750086033,
+        "InitialHeight": 256.01177763376927,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "5550826cc029496295b466c11f7590f3",
+        "Title": "Getting parameters from MS Element",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "029c0417629b41b38befd2cbde269c94",
+          "c98b917dcfd945269ba0cadeb569046a",
+          "5cdf6398678748e180518b1fc000824f",
+          "c04106dbe34a4d64af267bc0e7cefb8a",
+          "8ec5965ff1ca4c7aa212e34a6052af36"
+        ],
+        "HasNestedGroups": false,
+        "Left": 3811.1248548856565,
+        "Top": 357.8031220765771,
+        "Width": 1596.6078533963164,
+        "Height": 217.78199522960983,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 430.8031220765771,
+        "InitialHeight": 157.78199522960983,
+        "TextblockHeight": 63.0,
+        "Background": "#FF48B9FF"
+      },
+      {
+        "Id": "02670ed9552647bdb5119b6f363c3cdd",
+        "Title": "Get ModelStudio object by class's name (ANALOGUE)",
+        "DescriptionText": "<Дважды нажмите здесь, чтобы изменить описание группы>",
+        "IsExpanded": true,
+        "WidthAdjustment": 0.0,
+        "HeightAdjustment": 0.0,
+        "Nodes": [
+          "64ef30daca904c07b90b01fb3dead331",
+          "4be8f622074847d197a3c8fb2a786b40"
+        ],
+        "HasNestedGroups": false,
+        "Left": 2215.02916857162,
+        "Top": 738.90723486737954,
+        "Width": 935.39290352891339,
+        "Height": 263.94168040051159,
+        "FontSize": 36.0,
+        "GroupStyleId": "00000000-0000-0000-0000-000000000000",
+        "InitialTop": 811.90723486737954,
+        "InitialHeight": 192.0,
+        "TextblockHeight": 63.0,
+        "Background": "#FFFF7BAC"
+      }
+    ],
+    "X": -670.09203834254072,
+    "Y": 25.674137376107979,
+    "Zoom": 0.46039945037328039
+  }
+}

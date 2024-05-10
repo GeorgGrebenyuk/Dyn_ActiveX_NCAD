@@ -34,7 +34,10 @@ namespace DynNCXLib
         /// <param name="ObjectList">The array of objects forming the closed coplanar face to be made into a region</param>
         public AcadRegion(AcadBlock AcadBlock, List<dynamic> ObjectList)
         {
-            this._i = (OdaX.AcadRegion)AcadBlock._i.AddRegion(ObjectList.Select(a=>a._i).ToArray());
+            OdaX.AcadEntity[] ents = ObjectList.Select(a => (OdaX.AcadEntity)a._i).ToArray();
+            var created_object = AcadBlock._i.AddRegion(ents);
+
+            this._i = created_object[0] as OdaX.AcadRegion;
         }
 
         ///<summary>

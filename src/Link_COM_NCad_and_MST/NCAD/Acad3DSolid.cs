@@ -48,7 +48,7 @@ namespace DynNCXLib
         /// <returns></returns>
         public static Acad3DSolid CreateTorus (AcadBlock AcadBlock, Point Center, double TorusRadius, double TubeRadius)
         {
-            return new Acad3DSolid(AcadBlock._i.AddTorus(Center, TorusRadius, TubeRadius));
+            return new Acad3DSolid(AcadBlock._i.AddTorus(Technical.PointByDynPoint(Center), TorusRadius, TubeRadius));
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace DynNCXLib
 		/// <returns></returns>
         public static Acad3DSolid CreateWedge (AcadBlock AcadBlock, Point Center, double Length, double Width, double Height)
         {
-            return new Acad3DSolid(AcadBlock._i.AddWedge(Technical.PointByDynPoint(Center), Length, Width, Height));
+            return new Acad3DSolid(AcadBlock._i.AddWedge(Technical.PointByDynPoint(Center, true), Length, Width, Height));
         }
 
         /// <summary>
@@ -162,7 +162,7 @@ namespace DynNCXLib
 		/// <returns></returns>
         public static Acad3DSolid AddExtrudedSolidAlongPath(AcadBlock AcadBlock, AcadRegion Profile, dynamic Path)
         {
-            return new Acad3DSolid(AcadBlock._i.AddExtrudedSolidAlongPath(Profile._i, Path));
+            return new Acad3DSolid(AcadBlock._i.AddExtrudedSolidAlongPath(Profile._i, Path._i));
         }
 
         /// <summary>
@@ -219,9 +219,9 @@ namespace DynNCXLib
         ///<summary>
         ///Performs a Boolean operation (union, intersect, or subtract) between the object and another 3DSolid or Region object
         ///</summary>
-        public void Boolean(OdaX.AcBooleanType Operation,dynamic SolidObject) 
+        public void Boolean(OdaX.AcBooleanType BooleanType, dynamic SolidOrRegionObject) 
 		{
-			this._i.Boolean(Operation,SolidObject._i);
+			this._i.Boolean(BooleanType, SolidOrRegionObject._i);
 		}
 
         /// <summary>
